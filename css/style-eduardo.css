@@ -1,0 +1,224 @@
+/* Importar fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Definición de variables CSS */
+:root {
+    --color-primary-text: #222;
+    --color-secondary-text: #7f8c8d;
+    --color-background-body: #f4f4f4;
+    --color-background-section: white;
+    --color-background-navbar: transparent;
+    --color-heading: #2c3e50;
+    --color-accent: #3498db;
+    --color-light-gray: #ccc;
+
+    --font-primary: 'Open Sans', sans-serif;
+    --font-secondary: 'Playfair Display', serif;
+
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
+    --spacing-xl: 2rem;
+    --spacing-nav: 1.5rem;
+
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Estilos generales y reseteo */
+body {
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: var(--color-background-body);
+    color: var(--color-primary-text);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-nav) var(--spacing-lg);
+    background-color: var(--color-background-navbar);
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--color-primary-text);
+}
+
+.nav-links a {
+    color: var(--color-primary-text);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: var(--font-primary);
+    margin-left: var(--spacing-sm);
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
+}
+
+/* Sección del equipo */
+.team-section {
+    padding-top: 5rem;
+}
+
+.team-header {
+    margin-bottom: 3rem;
+    max-width: 500px;
+}
+
+#team-title {
+    font-family: var(--font-secondary);
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 0;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+/* Grid de miembros */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+}
+
+.member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: var(--spacing-md);
+}
+
+.member-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.member-details {
+    margin-top: var(--spacing-sm);
+    text-align: left;
+}
+
+.member-details h2 {
+    margin: 0;
+}
+
+.member-details h2 a {
+    font-family: var(--font-primary);
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--color-primary-text);
+}
+
+.member-number {
+    font-family: var(--font-primary);
+    font-size: 0.8rem;
+    color: var(--color-secondary-text);
+    margin-bottom: 5px;
+}
+
+/* Card del integrante individual */
+.member-page {
+    padding-top: 5rem;
+}
+
+.member-card-full {
+    display: flex;
+    gap: var(--spacing-lg);
+    background-color: var(--color-background-section);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.profile-pic-large {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.card-content {
+    flex: 1;
+}
+
+.member-name-large {
+    font-family: var(--font-secondary);
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+
+/* Breakpoint 400px (celulares pequeños) */
+@media screen and (max-width: 400px) {
+  .container {
+        padding: var(--spacing-sm);
+    }
+  .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--spacing-nav) var(--spacing-sm);
+    }
+  .nav-links a {
+        margin-left: 0;
+        margin-right: var(--spacing-sm);
+    }
+  .team-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    #team-title {
+        font-size: 2.5rem;
+    }
+  .team-grid {
+        grid-template-columns: 1fr;
+    }
+  .member-card-full {
+        flex-direction: column;
+    }
+  .profile-pic-large {
+        width: 100%;
+    }
+}
+
+/* Breakpoint 900px (tablets) */
+@media screen and (min-width: 401px) and (max-width: 900px) {
+  .team-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+  .member-card-full {
+        flex-direction: column;
+    }
+  .profile-pic-large {
+        width: 100%;
+    }
+}
+
+/* Breakpoint 1200px (escritorio grande) */
+@media screen and (min-width: 901px) and (max-width: 1200px) {
+  .container {
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+}
