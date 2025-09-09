@@ -123,3 +123,10 @@ a:hover{
 }
 
 
+.foto-perfil {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* Hace la imagen redonda */
+  object-fit: cover;
+  margin-bottom: 15px;
+}
