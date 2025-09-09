@@ -13,13 +13,14 @@ body{
 }
 h1{font-size: 3rem;}
 h2{font-size: 2.8rem;}
+h4{font-size: 2rem;}
 p{
     font-size: 1rem;
     margin: 10px 0;
 }
 a{text-decoration: none;}
 
-/*Clases */
+
 .container{
     margin: auto;
     max-width: 1300px;
@@ -40,21 +41,26 @@ a{text-decoration: none;}
 }
 #navbar{
     overflow: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-#navbar ul{
-    list-style: none;
-    color: white;
-    float: right;
-    li{
-        float: left;
-        a{
-            display: block;
-            padding: 20px;
-            text-align: center;
+    padding: 3px;
+    ul{
+        list-style: none;
+        color: white;
+        float: right;
+        li{
+            float: left;
+            a{
+                display: block;
+                padding: 20px;
+                text-align: center;
+            }
         }
     }
+}
+a:visited{
+    color:black;
+}
+a:hover{
+    color: darkmagenta;
 }
 .logo{
     float:left;
@@ -87,3 +93,39 @@ a{text-decoration: none;}
         }
     }
 }
+
+/*estilos para crc.html*/
+#header-secundario{
+    background-color: rgba(128, 128, 128, 0.764);
+    height: 10vh;
+    color: white;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
+  grid-template-rows: auto auto; /* 2 filas automáticas */
+  gap: 20px; /* Espacio entre celdas */
+  padding: 40px;
+  height: 100vh; /* Opcional: pantalla completa */
+  box-sizing: border-box;
+}
+
+/* Estilos básicos para cada celda */
+.item {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.2em;
+}
+.list-items{
+    list-style: none;
+}
+.foto-perfil{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;    
+}
+
