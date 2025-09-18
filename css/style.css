@@ -1,4 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Doodle+Shadow&display=swap');
+
+:root {
+  --color-fondo: #ffffff;            /* Fondo principal (body) */
+  --color-texto-principal: #353535;  /* Texto general (gris oscuro) */
+  --color-secundario: #3C6E71;       /* Color secundario (verde azulado) */
+  --color-fondo-claro: #d9d9d9;      /* Fondo de secciones suaves o tarjetas */
+  --color-encabezado: #284b63;       /* Encabezados, barra de navegación, etc. */
+
+  --fuente-titulos: 'Montserrat', serif;
+  --fuente-texto: 'Roboto', sans-serif;
+}
 /*Reset*/
 *{
     padding: 0;
@@ -8,15 +20,19 @@
 
 /*Estilos Main*/
 body{
-    font-family: 'Montserrat';
+    font-family: var(--fuente-texto);
     line-height: 1.6;
 }
 h1{font-size: 3rem;}
-h2{font-size: 2.8rem;}
+h2{font-size: 2.8rem;
+  font-family: var(--fuente-titulos);
+  color: var(--color-texto-principal);
+}
 h4{font-size: 2rem;}
 p{
     font-size: 1rem;
     margin: 10px 0;
+    font-family: var(--fuente-texto);
 }
 a{text-decoration: none;}
 
@@ -57,10 +73,10 @@ a{text-decoration: none;}
     }
 }
 a:visited{
-    color:black;
+    color:var(--color-fondo);
 }
 a:hover{
-    color: darkmagenta;
+    color: var(--color-secundario);
 }
 .logo{
     float:left;
@@ -96,37 +112,162 @@ a:hover{
 
 /*estilos para crc.html*/
 #header-secundario{
-    background-color: rgba(128, 128, 128, 0.764);
+    background-color: var(--color-encabezado);
     height: 10vh;
-    color: white;
-}
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* 2 columnas iguales */
-  grid-template-rows: auto auto; /* 2 filas automáticas */
-  gap: 20px; /* Espacio entre celdas */
-  padding: 40px;
-  height: 100vh; /* Opcional: pantalla completa */
-  box-sizing: border-box;
+    color: var(--color-fondo);
 }
 
-/* Estilos básicos para cada celda */
-.item {
-  background-color: #f0f0f0;
-  padding: 20px;
-  border-radius: 10px;
+.seccion {
+      padding: 40px 20px;
+    }
+.seccion:nth-child(even) {
+      background-color:var(--color-fondo-claro);
+    }
+#seccion2 , #seccion3 , #seccion4 h2{
   text-align: center;
-  font-size: 1.2em;
 }
-.list-items{
-    list-style: none;
+.divisor-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--color-fondo-claro);
+  color: var(--color-secundario);
 }
 
+.linea {
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-secundario);
+  max-width: 35%;
+}
+ /* Sección 1: 2 columnas */
+    .seccion-1-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* dos columnas iguales */
+      gap: 50px;
+      max-width: 1000px; 
+      margin: 0 auto;
+      align-items: center;
+    }
 
+    .texto-columna {
+      font-size: 18px;
+      text-align: center;
+      color: var(--color-texto-principal);
+    }
+    
 .foto-perfil {
-  width: 200px;
-  height: 200px;
+  max-width: 100%;
+  height: 300px;
   border-radius: 50%; /* Hace la imagen redonda */
-  object-fit: cover;
-  margin-bottom: 15px;
+  filter: grayscale(100%);
 }
+/* Sección 2 - skills - 3 columnas*/
+.skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      max-width: 1000px; /* Ancho máximo del grid */
+      margin: 0 auto; /* Centra horizontalmente */
+      padding: 20px;
+    }
+.skills-grid div{
+      background-color:var(--color-secundario);
+      padding: 40px 20px;
+      color: var(--color-fondo);
+      text-align: center;
+      align-items: center;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+}
+.skills-grid > div:hover {
+  transform: scale(1.05);
+}
+  /* Sección 3 - films - 3 columnas carrousel*/
+.carrusel {
+      position: relative;
+      max-width: 600px;
+      margin: 50px auto;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+.carrusel-imagenes {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+.carrusel-imagenes img {
+      width: 100%;
+      height: 300px;
+      object-fit: contain;
+      background-color: var(--color-fondo-claro);
+      flex-shrink: 0; /* evita que se reduzcan */
+    }
+.carrusel-botones {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      padding: 0 20px;
+      z-index: 1;
+    }
+.carrusel-botones button {
+      background-color:var(--color-encabezado);
+      border: none;
+      color: white;
+      padding: 10px 16px;
+      cursor: pointer;
+      font-size: 24px;
+      border-radius: 5px;
+    }
+ .carrusel-botones button:hover {
+      background-color: var(--color-texto-principal);
+  }
+
+
+  /* Sección 4 - music - 4 columnas*/
+.music-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 4 columnas de igual ancho */
+  gap: 20px; /* espacio entre columnas y filas */
+  padding: 20px;
+  width: 80%;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+.music1 , .music2 , .music3 , .music4 {
+  background-color: var(--color-fondo);
+  height: 20em;
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 18px;
+  overflow: hidden;
+  position: relative;
+}
+.music-grid p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--color-fondo);
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-align: center;
+      z-index: 1; 
+      margin: 0;
+    }
+.music-grid img{
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.2);
+}
+
+
+
