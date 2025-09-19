@@ -425,19 +425,39 @@ a:hover {
   background: #fff;
   border-radius: 8px;
   padding: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-  max-width: 280px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  
+  /* Escalado proporcional */
+  max-width: 20vw;   /* máximo 40% del ancho de la pantalla */
+  max-height: 60vh;  /* máximo 60% de la altura de la pantalla */
+  overflow: auto;    /* si aún así es muy grande, habilita scroll */
+}
+
+#popup div {
+  font-size: clamp(12px, 1.5vw, 13px);
+  text-align: center;
+  font-weight: 600;
 }
 
 #popup img {
-  display: block;
-  width: 240px;
+  width: 100%;
   height: auto;
+  object-fit: contain; /* mantiene proporciones */
   border-radius: 6px;
-  margin-bottom: 6px;
 }
 
-#popup .name {
-  font-weight: 600;
+
+
+/* || FOOTER */
+
+footer {
+  background-color: var(--color-encabezado);
+  padding: 5px;
   text-align: center;
+
+}
+
+footer p {
+  color: var(--color-fondo);
+  font-size: 0.8rem;
 }
