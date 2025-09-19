@@ -109,9 +109,9 @@ a:hover{
     color: var(--color-secundario);
 }
 .logo{
-    float:left;
+    
     padding-top: 2px;
-    height: 150px;
+    max-height: 100px;  
     
 }
 /*fin navbar*/
