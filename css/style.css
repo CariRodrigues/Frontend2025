@@ -64,19 +64,12 @@ p{
 }
 a{text-decoration: none;
 }
-
-
-.container{
-    margin: auto;
-    max-width: 1300px;
-    overflow: auto;
-    padding: 0 20px;
-}
 .equipo{
     font-size: 3.5rem;
     font-family: var(--fuente-titulos);
 }
 /*Header principal*/
+/*
 #mainheader{
     background-image: url("../img/portada.jpg");
     background-repeat: no-repeat;
@@ -85,42 +78,57 @@ a{text-decoration: none;
     height: 60vh;
     color: white;
 }
-#navbar{
-    overflow: auto;
-    padding: 3px;
-    ul{
-        list-style: none;
-        color: white;
-        float: right;
-        li{
-            float: left;
-            a{
-                display: block;
-                padding: 20px;
-                text-align: center;
-            }
-        }
-    }
+*/
+#mainheader{
+    background-color: var(--color-encabezado);
+    height: 50vh;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
 }
+#navbar{
+    display: flex;
+     height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    overflow: auto;
+    background-color:  var(--color-encabezado);
+    padding: 0 1rem;
+   }
+
 a:visited{
     color:var(--color-texto-principal);
 }
 a:hover{
     color: var(--color-secundario);
 }
-.logo{
-    
-    padding-top: 2px;
-    max-height: 100px;  
-    
+.logo img{
+    max-height: 80px;
+    max-width:200px;
+    display: block;
+}
+.nav-links {
+  list-style: none;
+  display: flex;   /* pone los <li> en fila */
+  margin: 0;
+  padding: 0;
+}
+.nav-links li {
+  margin-left: 1.5rem;
+}
+.nav-links a {
+  color: var(--color-fondo-claro);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px;
 }
 /*fin navbar*/
 
 #encabezado1{
     text-align: center;
-    padding-top: 200px;
+    padding-top: 100px;
     h1{
         font-weight: 300;
+        color: var(--color-fondo-claro);  
     }
 }
 #texto{
@@ -201,10 +209,13 @@ a:hover{
       margin: 0 auto; /* Centra horizontalmente */
       padding: 20px;
     }
+    .skill-text{
+      color: var(--color-fondo-claro);
+    }
 .skills-grid div{
       background-color:var(--color-secundario);
       padding: 40px 20px;
-      color: var(--color-fondo);
+      color: var(--color-fondo-claro);
       text-align: center;
       align-items: center;
       border-radius: 8px;
