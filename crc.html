@@ -3,15 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <title>Carina</title>
 </head>
 <body>
-    <p>-Foto
--Nombre
--Ubicación actual (ciudad en la que vive)
--Edad
--Habilidades (mínimo 4)
--Películas favoritas (mínimo 3)
--Discos o música favorita (mínimo 3)</p>
+    <header id="header-secundario">
+        <nav id="navbar">
+            <div class="container">
+                <img class="logo" src="img/logo.png" alt="Codebolts Six">  
+                <ul>
+                    <li><a href="index.html"> Inicio </a></li>
+                    <li><a href="bitacora.html">Bitácora</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+   <section class="seccion" id="seccion1">
+    <div class="seccion-1-grid">
+      <div class="texto-columna">
+        <h2>Carina Rodrigues Cabrita</h2>
+        <p>Hola, soy de la Ciudad de La Plata y tengo 36 años</p>
+      </div>
+      <div class="imagen-columna">
+        <img src="img/car.webp" alt="Carina" class="foto-perfil">
+      </div>
+    </div>
+  </section>
+
+  <div class="divisor-icono">
+      <span class="linea"></span>
+      <i class="fas fa-leaf icono"></i>
+      <span class="linea"></span>
+  </div>
+
+  <section class="seccion" id="seccion2">
+    <h2>Habilidades</h2>
+    <div class="skills-grid">
+      <div>
+        <p><strong>Cocinar </strong><br> Me encanta preparar cosas dulces para la merienda o el postre. Guardo varias recetas y cada vez que puedo pruebo alguna.</p>
+        
+      </div>
+      <div>
+        <p><strong>Enseñar </strong><br> Soy profesora de matemáticas, la enseñanza me ha gustado siempre. En pandemia cree un canal de youtube para subir los videos 
+        a mis alumnos y hace poco comencé a poner el contenido público para subir videos nuevos que sirvan a otras personas.</p>
+        
+      </div>
+      <div>
+        <p><strong>Fotografía</strong><br> Me encanta hacer fotos, sobre todo de la naturaleza o de lo que cocino. Nunca estudié fotografía pero lo he pensado varias veces. 
+        En un tiempo me gustaría comprarme una cámara y aprender a usarla de forma más profesional.</p>
+        
+      </div>
+    </div>
+  </section>
+  
+   <div class="divisor-icono">
+      <span class="linea"></span>
+      <i class="fas fa-leaf icono"></i>
+      <span class="linea"></span>
+   </div>
+
+  <section class="seccion" id="seccion3">
+    <h2>Mis películas favoritas</h2>
+    <div class="carrusel">
+      <div class="carrusel-imagenes" id="carrusel-imagenes">
+        <img src="img/film1.jpg" alt="Butterfly Effect">
+        <img src="img/film2.jpg" alt="Harry Potter 4">
+        <img src="img/film3.jpg" alt="Mente Siniestra">
+      </div>
+      <div class="carrusel-botones">
+        <button onclick="moverCarrusel(-1)">&#10094;</button>
+        <button onclick="moverCarrusel(1)">&#10095;</button>
+      </div>
+    </div>
+
+    <script>
+        let indice = 0;
+
+        function moverCarrusel(direccion) {
+          const carrusel = document.getElementById('carrusel-imagenes');
+          const total = carrusel.children.length;
+
+          indice = (indice + direccion + total) % total;
+
+        
+          carrusel.style.transform = `translateX(-${indice * 100}%)`;
+        }
+    </script>
+  </section>
+
+   <div class="divisor-icono">
+      <span class="linea"></span>
+      <i class="fas fa-leaf icono"></i>
+      <span class="linea"></span>
+   </div>
+
+  <section class="seccion" id="seccion4">
+    <h2>Música</h2>
+    <div class="music-grid">
+      <div class="music1">
+        <img src="img/music1.webp" alt="Coldplay">
+      
+        <p>COLDPLAY</p>
+        
+      </div>
+      <div class="music2">
+        <img src="img/music2.jpg" alt="No te va gustar">
+        
+        <p>NO TE VA GUSTAR</p>
+    
+      </div>
+      <div class="music3">
+        <img src="img/music3.webp" alt="Babasonicos">
+        
+        <p>BABASONICOS</p>
+        
+      </div>
+      <div class="music4">
+        <img src="img/music4.jpg" alt="Oasis">
+        
+        <p>OASIS</p>
+        
+      </div>
+    </div>
+    
+  </section>
+    
 </body>
 </html>

@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <title>Grupo 6</title>
 </head>
 <body>
     <header id="mainheader">
         <nav id="navbar">
             <div class="container">
-                <h1 class="logo">Grupo 6</h1>
+                
+                <img class="logo" src="img/logo.png" alt="Codebolts Six">  
+                
                 <ul>
                     <li><a href="#mainheader"> Inicio </a></li>
                     <li><a href="bitacora.html">Bitácora</a></li>
@@ -19,9 +22,29 @@
         </nav>
         <div id="encabezado1">
             <div class="container">
-                <h1 class="equipo">"Nombre del equipo"</h1>
+                <h1 class="equipo">"Codebolts Six"</h1>
+                <button id="modoOscuroBtn">
+                    <i class="fa-solid fa-moon icono-modo"></i>
+                </button>
             </div>        
         </div>
+
+        <script>
+            const botonModo = document.getElementById('modoOscuroBtn');
+            const iconoModo = botonModo.querySelector('.icono-modo');
+
+            botonModo.addEventListener('click', () => {
+            document.body.classList.toggle('modo-oscuro');
+
+                if (document.body.classList.contains('modo-oscuro')) {
+                    iconoModo.classList.remove('fa-moon');
+                    iconoModo.classList.add('fa-sun');
+                } else {
+                    iconoModo.classList.remove('fa-sun');
+                    iconoModo.classList.add('fa-moon');
+                }
+            });
+        </script>
     </header>
     <section id="texto">
         <div class="container">
