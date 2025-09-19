@@ -24,6 +24,8 @@
 
 **Fecha:** 19-09-2025  
 
+---
+
 ## Enlace al Proyecto Desplegado
 - Repositorio GitHub: [https://github.com/CariRodrigues/Frontend2025](https://github.com/CariRodrigues/Frontend2025)
 - Proyecto en Vercel: [https://frontend2025-codebolts-Six.vercel.app](https://frontend2025-Codebolts-Six.vercel.app) !!!Cambiar por el link definitivo!!!
