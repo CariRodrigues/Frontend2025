@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+     <script src="./js/main.js" defer></script>
     <title>Bitácora</title>
 </head>
 <body>
@@ -25,16 +26,6 @@
                <li><a href="bitacora.html">Bitácora</a></li>  
             </ul>
         </nav>
-        <script>
-            // JS para abrir/cerrar menú al clickear
-                document.querySelectorAll(".dropbtn").forEach(btn => {
-                btn.addEventListener("click", e => {
-                    e.preventDefault(); // evita que salte al inicio
-                    const menu = btn.nextElementSibling;
-                    menu.style.display = menu.style.display === "block" ? "none" : "block";
-                });
-                });
-        </script>
     </header>
        
     <p>Esta sección debe contener una descripción del proceso de desarrollo del proyecto,
@@ -45,5 +36,11 @@ incluyendo:
 
 La bitácora está pensada para registrar el proceso de trabajo y debe ampliarse en el TP2, y
 TP3, incorporando reflexiones sobre la evolución del proyecto.</p>
+ <p>
+        05/09/25: Se definió el esquema de colores y tipografía.
+        07/09/25: Implementadas animaciones en la portada.
+        12/09/25: Ajustes de responsive en tablet (900px) y móvil (400px).
+        18/09/25: Creación de páginas individuales de cada integrante.
+    </p>
 </body>
 </html>

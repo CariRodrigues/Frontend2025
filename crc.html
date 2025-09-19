@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <title>Carina</title>
+    <script src="./js/scripts_carina.js" defer></script>
 </head>
 <body>
     <header >
@@ -26,16 +27,7 @@
                <li><a href="bitacora.html">Bitácora</a></li>  
             </ul>
         </nav>
-        <script>
-            // JS para abrir/cerrar 'Integrantes' al clickear
-                document.querySelectorAll(".dropbtn").forEach(btn => {
-                btn.addEventListener("click", e => {
-                    e.preventDefault(); // evita que salte al inicio
-                    const menu = btn.nextElementSibling;
-                    menu.style.display = menu.style.display === "block" ? "none" : "block";
-                });
-                });
-        </script>
+
     </header>
    <section class="seccion" id="seccion1">
     <div class="seccion-1-grid">
@@ -44,7 +36,7 @@
         <p>Hola, soy de la Ciudad de La Plata y tengo 36 años</p>
       </div>
       <div class="imagen-columna">
-        <img src="img/car.webp" alt="Carina" class="foto-perfil">
+        <img src="img/carina/car.webp" alt="Carina" class="foto-perfil">
       </div>
     </div>
   </section>
@@ -85,9 +77,9 @@
     <h2>Mis películas favoritas</h2>
     <div class="carrusel">
       <div class="carrusel-imagenes" id="carrusel-imagenes">
-        <img src="img/film1.jpg" alt="Butterfly Effect">
-        <img src="img/film2.jpg" alt="Harry Potter 4">
-        <img src="img/film3.jpg" alt="Mente Siniestra">
+        <img src="img/carina/film1.jpg" alt="Butterfly Effect">
+        <img src="img/carina/film2.jpg" alt="Harry Potter 4">
+        <img src="img/carina/film3.jpg" alt="Mente Siniestra">
       </div>
       <div class="carrusel-botones">
         <button onclick="moverCarrusel(-1)">&#10094;</button>
@@ -95,19 +87,6 @@
       </div>
     </div>
 
-    <script>
-        let indice = 0;
-
-        function moverCarrusel(direccion) {
-          const carrusel = document.getElementById('carrusel-imagenes');
-          const total = carrusel.children.length;
-
-          indice = (indice + direccion + total) % total;
-
-        
-          carrusel.style.transform = `translateX(-${indice * 100}%)`;
-        }
-    </script>
   </section>
 
    <div class="divisor-icono">
@@ -120,25 +99,25 @@
     <h2>Música</h2>
     <div class="music-grid">
       <div class="music1">
-        <img src="img/music1.webp" alt="Coldplay">
+        <img src="img/carina/music1.webp" alt="Coldplay">
       
         <p>COLDPLAY</p>
         
       </div>
       <div class="music2">
-        <img src="img/music2.jpg" alt="No te va gustar">
+        <img src="img/carina/music2.jpg" alt="No te va gustar">
         
         <p>NO TE VA GUSTAR</p>
     
       </div>
       <div class="music3">
-        <img src="img/music3.webp" alt="Babasonicos">
+        <img src="img/carina/music3.webp" alt="Babasonicos">
         
         <p>BABASONICOS</p>
         
       </div>
       <div class="music4">
-        <img src="img/music4.jpg" alt="Oasis">
+        <img src="img/carina/music4.jpg" alt="Oasis">
         
         <p>OASIS</p>
         

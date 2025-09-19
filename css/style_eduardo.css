@@ -1,224 +1,192 @@
-/* Importar fuentes de Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap');
-
-/* Definición de variables CSS */
 :root {
-    --color-primary-text: #222;
-    --color-secondary-text: #7f8c8d;
-    --color-background-body: #f4f4f4;
-    --color-background-section: white;
-    --color-background-navbar: transparent;
-    --color-heading: #2c3e50;
-    --color-accent: #3498db;
-    --color-light-gray: #ccc;
-
-    --font-primary: 'Open Sans', sans-serif;
-    --font-secondary: 'Playfair Display', serif;
-
-    --spacing-sm: 10px;
-    --spacing-md: 20px;
-    --spacing-lg: 30px;
-    --spacing-xl: 2rem;
-    --spacing-nav: 1.5rem;
-
-    --border-radius: 8px;
-    --box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --color-primary: #ff6b6b;
+    /* Rojo coral */
+    --color-secondary: #4ecdc4;
+    /* Verde menta */
+    --color-text-primary: #34495e;
+    /* Gris carbón */
+    --color-text-secondary: #95a5a6;
+    /* Gris claro */
+    --color-background-light: #f7f7f7;
+    --color-background-card: #ffffff;
+    --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --shadow-strong: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilos generales y reseteo */
+/* Estilos generales */
 body {
-    font-family: var(--font-primary);
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-background-light);
+    cursor: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    background-color: var(--color-background-body);
-    color: var(--color-primary-text);
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: var(--spacing-md);
+/* Cursor personalizado */
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--color-secondary);
+    mix-blend-mode: exclusion;
+    position: absolute;
+    pointer-events: none;
+    z-index: 9999;
+    transition: width 0.3s ease, height 0.3s ease;
 }
 
-/* Navbar */
-.navbar {
+/* Navegación del encabezado */
+.header-nav {
+    background-color: var(--color-background-card);
+    border-bottom: 1px solid var(--color-border-card);
+    width: 100%;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--spacing-nav) var(--spacing-lg);
-    background-color: var(--color-background-navbar);
+    position: sticky;
+    top: 0;
+    z-index: 50;
 }
 
-.logo {
-    font-family: var(--font-primary);
+.header-nav-links {
+    display: flex;
+    gap: 1.5rem;
+    /* 24px */
+}
+
+.header-link {
     font-weight: 600;
-    font-size: 1.2rem;
-    color: var(--color-primary-text);
-}
-
-.nav-links a {
-    color: var(--color-primary-text);
+    color: var(--color-text-primary);
     text-decoration: none;
-    font-weight: bold;
-    font-family: var(--font-primary);
-    margin-left: var(--spacing-sm);
-    transition: color 0.3s;
+    transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-    color: var(--color-accent);
+.header-link:hover {
+    color: var(--color-primary);
 }
 
-/* Sección del equipo */
-.team-section {
-    padding-top: 5rem;
+/* Contenido principal */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    width: 100%;
 }
 
-.team-header {
-    margin-bottom: 3rem;
-    max-width: 500px;
+/* Tarjeta de perfil */
+.profile-card {
+    background-color: var(--color-background-card);
+    padding: 2rem;
+    width: 100%;
+    max-width: 64rem;
+    /* 1024px */
+    border-radius: 2rem;
+    /* 32px */
+    box-shadow: var(--shadow-light);
+    transition: box-shadow 0.3s ease;
 }
 
-#team-title {
-    font-family: var(--font-secondary);
-    font-size: 4rem;
-    font-weight: 700;
-    margin: 0;
-    cursor: pointer;
-    transition: color 0.3s;
+.profile-card:hover {
+    box-shadow: var(--shadow-strong);
 }
 
-/* Grid de miembros */
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-md);
-}
-
-.member-card {
+.card-inner-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    position: relative;
-    margin-bottom: var(--spacing-md);
+    gap: 1.5rem;
+    /* 24px */
 }
 
-.member-card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-}
-
-.member-details {
-    margin-top: var(--spacing-sm);
-    text-align: left;
-}
-
-.member-details h2 {
-    margin: 0;
-}
-
-.member-details h2 a {
-    font-family: var(--font-primary);
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: var(--color-primary-text);
-}
-
-.member-number {
-    font-family: var(--font-primary);
-    font-size: 0.8rem;
-    color: var(--color-secondary-text);
-    margin-bottom: 5px;
-}
-
-/* Card del integrante individual */
-.member-page {
-    padding-top: 5rem;
-}
-
-.member-card-full {
+.profile-info-section {
+    flex-shrink: 0;
     display: flex;
-    gap: var(--spacing-lg);
-    background-color: var(--color-background-section);
-    padding: var(--spacing-xl);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.profile-pic-large {
-    width: 300px;
-    height: auto;
+.profile-image-container {
+    transform-style: preserve-3d;
+    transition: all 0.5s cubic-bezier(.25, .8, .25, 1);
+}
+
+.profile-image {
+    transform: translateZ(20px);
+    border-radius: 12px;
+    border: 3px solid var(--color-secondary);
+    width: 10rem;
+    height: 10rem;
     object-fit: cover;
-    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
 }
 
-.card-content {
-    flex: 1;
+/* Secciones de detalles */
+.details-section {
+    flex-grow: 1;
 }
 
-.member-name-large {
-    font-family: var(--font-secondary);
-    font-size: 2.5rem;
-    margin-top: 0;
+.section-title {
+    font-size: 1.25rem;
+    /* 20px */
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    /* 8px */
 }
 
-.hidden {
-    display: none;
+.section-list {
+    list-style-type: disc;
+    padding-left: 1.25rem;
+    /* 20px */
+    list-style-position: inside;
+    color: var(--color-text-primary);
+}
+
+.section-list li {
+    margin-bottom: 0.25rem;
+    /* 4px */
+}
+
+/* Pie de página */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+    /* 14px */
 }
 
 /* Responsive Design */
-
-/* Breakpoint 400px (celulares pequeños) */
-@media screen and (max-width: 400px) {
-  .container {
-        padding: var(--spacing-sm);
+@media (min-width: 768px) {
+    .profile-card {
+        padding: 3rem;
+        /* 48px */
     }
-  .navbar {
-        flex-direction: column;
+
+    .card-inner-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 3rem;
+        /* 48px */
+    }
+
+    .profile-info-section {
         align-items: flex-start;
-        padding: var(--spacing-nav) var(--spacing-sm);
+        text-align: left;
     }
-  .nav-links a {
-        margin-left: 0;
-        margin-right: var(--spacing-sm);
-    }
-  .team-header {
-        text-align: center;
-        margin-bottom: 2rem;
-    }
-    #team-title {
-        font-size: 2.5rem;
-    }
-  .team-grid {
-        grid-template-columns: 1fr;
-    }
-  .member-card-full {
-        flex-direction: column;
-    }
-  .profile-pic-large {
-        width: 100%;
-    }
-}
 
-/* Breakpoint 900px (tablets) */
-@media screen and (min-width: 401px) and (max-width: 900px) {
-  .team-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-  .member-card-full {
-        flex-direction: column;
-    }
-  .profile-pic-large {
-        width: 100%;
-    }
-}
-
-/* Breakpoint 1200px (escritorio grande) */
-@media screen and (min-width: 901px) and (max-width: 1200px) {
-  .container {
-        padding: var(--spacing-md) var(--spacing-lg);
+    .profile-image {
+        width: 16rem;
+        height: 16rem;
     }
 }
