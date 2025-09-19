@@ -13,11 +13,28 @@
                 <img src="img/logo.png" alt="Codebolts Six Logo">
             </div>
             <ul class="nav-links">
-              <li><a href="index.html"> Inicio </a></li>
-               <li><a href="">Integrantes</a></li>
-               <li><a href="bitacora.html">Bitácora</a></li>
+               <li><a href="index.html"> Inicio </a></li>
+               <li class="dropdown">
+                    <a href="#" class="dropbtn">Integrantes</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/eduardo.html">Eduardo</a></li>
+                        <li><a href="/crc.html">Carina</a></li>
+                        <li><a href="#">...</a></li>
+                    </ul>
+               </li>
+               <li><a href="bitacora.html">Bitácora</a></li>  
             </ul>
         </nav>
+        <script>
+            // JS para abrir/cerrar menú al clickear
+                document.querySelectorAll(".dropbtn").forEach(btn => {
+                btn.addEventListener("click", e => {
+                    e.preventDefault(); // evita que salte al inicio
+                    const menu = btn.nextElementSibling;
+                    menu.style.display = menu.style.display === "block" ? "none" : "block";
+                });
+                });
+        </script>
     </header>
        
     <p>Esta sección debe contener una descripción del proceso de desarrollo del proyecto,

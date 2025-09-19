@@ -90,7 +90,6 @@ a{text-decoration: none;
      height: 10vh;
     justify-content: space-between;
     align-items: center;
-    overflow: auto;
     background-color:  var(--color-encabezado);
     padding: 0 1rem;
    }
@@ -121,7 +120,46 @@ a:hover{
   font-weight: 500;
   padding: 8px;
 }
+.nav-links a:hover {
+  color: var(--color-secundario); /* o el color que quieras */
+}
 /*fin navbar*/
+/*desplegable "integrantes"*/
+.dropdown {
+  position: relative; 
+}
+.dropdown-menu {
+  display: none; /* oculto por defecto */
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  border-radius: 10%;
+  background: var(--color-encabezado);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 150px;
+}
+.dropdown-menu li a {
+  display: block;
+  padding: 10px;
+  border-radius: 20%;
+  color: var(--color-fondo-claro);
+  text-decoration: none;
+}
+.dropdown-menu li a:hover {
+  background: var(--color-encabezado);
+  color: var(--color-secundario);
+}
+/* Mostrar al pasar el mouse */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+
+
+
 
 #encabezado1{
     text-align: center;
