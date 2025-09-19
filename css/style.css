@@ -89,12 +89,21 @@ a {
 }
 
 /*Header principal*/
-
+/*
 #mainheader{
-    background-color: var(--color-encabezado);
-    height: 50vh;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
+    background-image: url("../img/portada.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    color: white;
+}
+*/
+#mainheader {
+  background-color: var(--color-encabezado);
+  height: 50vh;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
 #navbar {
@@ -183,6 +192,10 @@ a:hover {
 }
 
 
+
+
+
+
 #encabezado1 {
   text-align: center;
   padding-top: 100px;
@@ -218,6 +231,7 @@ a:hover {
   height: 10vh;
   color: var(--color-fondo);
 }
+
 .seccion {
   padding: 40px 20px;
 }
@@ -247,15 +261,17 @@ a:hover {
   background-color: var(--color-secundario);
   max-width: 35%;
 }
- /* Sección 1: 2 columnas */
-    .seccion-1-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr; /* dos columnas iguales */
-      gap: 100px;
-      max-width: 1000px; 
-      margin: 0 auto;
-      align-items: center;
-    }
+
+/* Sección 1: 2 columnas */
+.seccion-1-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* dos columnas iguales */
+  gap: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+}
 
 .texto-columna {
   font-size: 18px;
@@ -265,9 +281,10 @@ a:hover {
 
 .foto-perfil {
   max-width: 100%;
-  height: 280px;
-  border-radius: 45%; /* Hace la imagen redonda */
-  filter: grayscale(80%);
+  height: 300px;
+  border-radius: 50%;
+  /* Hace la imagen redonda */
+  filter: grayscale(100%);
 }
 
 /* Sección 2 - skills - 3 columnas*/
@@ -400,4 +417,47 @@ a:hover {
 }
 
 
+/* Popup con imagen */
+#popup {
+  position: absolute;
+  display: none;
+  z-index: 9999;
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  
+  /* Escalado proporcional */
+  max-width: 20vw;   /* máximo 40% del ancho de la pantalla */
+  max-height: 60vh;  /* máximo 60% de la altura de la pantalla */
+  overflow: auto;    /* si aún así es muy grande, habilita scroll */
+}
 
+#popup div {
+  font-size: clamp(12px, 1.5vw, 13px);
+  text-align: center;
+  font-weight: 600;
+}
+
+#popup img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* mantiene proporciones */
+  border-radius: 6px;
+}
+
+
+
+/* || FOOTER */
+
+footer {
+  background-color: var(--color-encabezado);
+  padding: 5px;
+  text-align: center;
+
+}
+
+footer p {
+  color: var(--color-fondo);
+  font-size: 0.8rem;
+}
