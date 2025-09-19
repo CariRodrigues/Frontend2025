@@ -6,18 +6,28 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <title>Carina</title>
+    <script src="./js/scripts_carina.js" defer></script>
 </head>
 <body>
-    <header id="header-secundario">
+    <header >
         <nav id="navbar">
-            <div class="container">
-                <img class="logo" src="img/logo.png" alt="Codebolts Six">  
-                <ul>
-                    <li><a href="index.html"> Inicio </a></li>
-                    <li><a href="bitacora.html">Bitácora</a></li>
-                </ul>
+            <div class="logo" >
+                <img src="img/logo.png" alt="Codebolts Six Logo">
             </div>
+            <ul class="nav-links">
+               <li><a href="index.html"> Inicio </a></li>
+               <li class="dropdown">
+                    <a href="#" class="dropbtn">Integrantes</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/eduardo.html">Eduardo</a></li>
+                        <li><a href="#">Carina •</a></li>
+                        <li><a href="#">...</a></li>
+                    </ul>
+               </li>
+               <li><a href="bitacora.html">Bitácora</a></li>  
+            </ul>
         </nav>
+
     </header>
    <section class="seccion" id="seccion1">
     <div class="seccion-1-grid">
@@ -26,14 +36,14 @@
         <p>Hola, soy de la Ciudad de La Plata y tengo 36 años</p>
       </div>
       <div class="imagen-columna">
-        <img src="img/car.webp" alt="Carina" class="foto-perfil">
+        <img src="img/carina/car.webp" alt="Carina" class="foto-perfil">
       </div>
     </div>
   </section>
 
   <div class="divisor-icono">
       <span class="linea"></span>
-      <i class="fas fa-leaf icono"></i>
+      <i class="fa-solid fa-bolt"></i>
       <span class="linea"></span>
   </div>
 
@@ -41,16 +51,16 @@
     <h2>Habilidades</h2>
     <div class="skills-grid">
       <div>
-        <p><strong>Cocinar </strong><br> Me encanta preparar cosas dulces para la merienda o el postre. Guardo varias recetas y cada vez que puedo pruebo alguna.</p>
+        <p class="skill-text"><strong>Cocinar </strong><br> Me encanta preparar cosas dulces para la merienda o el postre. Guardo varias recetas y cada vez que puedo pruebo alguna.</p>
         
       </div>
       <div>
-        <p><strong>Enseñar </strong><br> Soy profesora de matemáticas, la enseñanza me ha gustado siempre. En pandemia cree un canal de youtube para subir los videos 
+        <p class="skill-text"><strong>Enseñar </strong><br> Soy profesora de matemáticas, la enseñanza me ha gustado siempre. En pandemia cree un canal de youtube para subir los videos 
         a mis alumnos y hace poco comencé a poner el contenido público para subir videos nuevos que sirvan a otras personas.</p>
         
       </div>
       <div>
-        <p><strong>Fotografía</strong><br> Me encanta hacer fotos, sobre todo de la naturaleza o de lo que cocino. Nunca estudié fotografía pero lo he pensado varias veces. 
+        <p class="skill-text"><strong>Fotografía</strong><br> Me encanta hacer fotos, sobre todo de la naturaleza o de lo que cocino. Nunca estudié fotografía pero lo he pensado varias veces. 
         En un tiempo me gustaría comprarme una cámara y aprender a usarla de forma más profesional.</p>
         
       </div>
@@ -59,7 +69,7 @@
   
    <div class="divisor-icono">
       <span class="linea"></span>
-      <i class="fas fa-leaf icono"></i>
+      <i class="fa-solid fa-bolt"></i>
       <span class="linea"></span>
    </div>
 
@@ -67,9 +77,9 @@
     <h2>Mis películas favoritas</h2>
     <div class="carrusel">
       <div class="carrusel-imagenes" id="carrusel-imagenes">
-        <img src="img/film1.jpg" alt="Butterfly Effect">
-        <img src="img/film2.jpg" alt="Harry Potter 4">
-        <img src="img/film3.jpg" alt="Mente Siniestra">
+        <img src="img/carina/film1.jpg" alt="Butterfly Effect">
+        <img src="img/carina/film2.jpg" alt="Harry Potter 4">
+        <img src="img/carina/film3.jpg" alt="Mente Siniestra">
       </div>
       <div class="carrusel-botones">
         <button onclick="moverCarrusel(-1)">&#10094;</button>
@@ -77,24 +87,11 @@
       </div>
     </div>
 
-    <script>
-        let indice = 0;
-
-        function moverCarrusel(direccion) {
-          const carrusel = document.getElementById('carrusel-imagenes');
-          const total = carrusel.children.length;
-
-          indice = (indice + direccion + total) % total;
-
-        
-          carrusel.style.transform = `translateX(-${indice * 100}%)`;
-        }
-    </script>
   </section>
 
    <div class="divisor-icono">
       <span class="linea"></span>
-      <i class="fas fa-leaf icono"></i>
+      <i class="fa-solid fa-bolt"></i>
       <span class="linea"></span>
    </div>
 
@@ -102,25 +99,25 @@
     <h2>Música</h2>
     <div class="music-grid">
       <div class="music1">
-        <img src="img/music1.webp" alt="Coldplay">
+        <img src="img/carina/music1.webp" alt="Coldplay">
       
         <p>COLDPLAY</p>
         
       </div>
       <div class="music2">
-        <img src="img/music2.jpg" alt="No te va gustar">
+        <img src="img/carina/music2.jpg" alt="No te va gustar">
         
         <p>NO TE VA GUSTAR</p>
     
       </div>
       <div class="music3">
-        <img src="img/music3.webp" alt="Babasonicos">
+        <img src="img/carina/music3.webp" alt="Babasonicos">
         
         <p>BABASONICOS</p>
         
       </div>
       <div class="music4">
-        <img src="img/music4.jpg" alt="Oasis">
+        <img src="img/carina/music4.jpg" alt="Oasis">
         
         <p>OASIS</p>
         
