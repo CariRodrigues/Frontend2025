@@ -200,8 +200,19 @@ header,
     background-blend-mode: darken; /* Mezcla el color con la imagen */
 }
 
+/* || SECTIONS */
 
-/* || CARDS */
+.section {
+    padding: 1rem;
+}
+
+.section-title {
+    margin-top: 0.8rem;
+    font-weight: 500;
+}
+
+
+/* || SECTIONS / CARDS */
 
 .cards-container {
     display: flex;
@@ -229,11 +240,13 @@ header,
 
 .card-img {
     width: 100%;
-    height: 150px;
+    height: auto;
     object-fit: cover;
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    border-radius: var(--border-radius) ;
     margin-bottom: 1rem;
 }
+
+/* || ANIMACIONES */
 
 .parallax-card {
     transition: transform 0.2s ease; 
@@ -253,5 +266,71 @@ header,
     bottom: 10px;  
     width: 100px;
     height: auto;
-    pointer-events: none;
+    /* pointer-events: none; */
+     cursor: pointer;
+    filter: drop-shadow(0 15px 8px rgba(0,0,0,0.5)); 
+}
+
+
+/* asegurar que las secciones sean contenedores posicionados */
+.main-top-container,
+.main-middle-container,
+.main-bottom-container {
+  position: relative;
+  overflow: visible; /* si hay overflow:hidden puede cortar la sombra */
+}
+
+/* el wrapper que movemos */
+.sea-wolf-wrap {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 120px;       /* ajustar según el png */
+  /* pointer-events: none; */
+  cursor: pointer;
+  transform: translateX(-9999px); /* start fuera de pantalla; JS lo moverá */
+  will-change: transform;
+  z-index: 6;         /* por debajo de las cards (if cards z-index > 6) */
+  display: block;
+}
+
+
+/* imagen que será el "reflejo" (bajo la imagen real) */
+.sea-wolf-reflection {
+  position: absolute;
+  top: 100%;                   /* justo debajo de la imagen */
+  left: 0;
+  width: 100%;
+  height: auto;
+  transform: scaleY(-0.2);       /* voltear verticalmente */
+  transform-origin: top center;
+  opacity: 0.1;
+  filter: blur(4px) saturate(0.6) brightness(0.5);
+  z-index: 1;                  /* detrás de la imagen real */
+  pointer-events: none;
+  margin-top: 90px;             /* separación entre lobo y su reflejo */
+}
+
+
+.sea-wolf:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+
+.wolf-message {
+    position: absolute;
+    bottom: 95px; /* encima del lobo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; 
+    z-index: 10; /* sobre el lobo */
+}
+
+/* Mostrar el mensaje al hacer hover en el contenedor */
+.sea-wolf-wrap:hover .wolf-message {
+    opacity: 1;
 }
