@@ -2,21 +2,21 @@
 const cards = document.querySelectorAll('.parallax-card');
 
 cards.forEach(card => {
-    card.addEventListener('mousemove', (event) => {
-        const rect = card.getBoundingClientRect();
-        const x = event.clientX - rect.left;
-        const y = event.clientY - rect.top;
+  card.addEventListener('mousemove', (event) => {
+    const rect = card.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
 
-        // Calcula la rotación
-        const cardX = (x / rect.width - 0.5) * 40;  // ángulo Y
-        const cardY = (y / rect.height - 0.5) * -40; // ángulo X
+    // Calcula la rotación
+    const cardX = (x / rect.width - 0.5) * 40;  // ángulo Y
+    const cardY = (y / rect.height - 0.5) * -40; // ángulo X
 
-        card.style.transform = `rotateY(${cardX}deg) rotateX(${cardY}deg)`;
-    });
+    card.style.transform = `rotateY(${cardX}deg) rotateX(${cardY}deg)`;
+  });
 
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'rotateY(0deg) rotateX(0deg)';
-    });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'rotateY(0deg) rotateX(0deg)';
+  });
 });
 
 
@@ -25,7 +25,7 @@ cards.forEach(card => {
 const wrappers = document.querySelectorAll('.sea-wolf-wrap');
 const sections = document.querySelectorAll('section');
 
-const speedFactor = 1;   // ajustar
+const speedFactor = 0.8;   // ajustar
 const startScroll = 0.8; // empezar movimiento a 60%
 
 let lastScrollY = window.scrollY;
@@ -88,6 +88,19 @@ function handleScroll() {
     // mover wrapper (no la <img> directa)
     wrapper.style.transform = `translateX(${moveX}px)`;
 
+    // efecto "latido" al mover
+    wrapper.animate(
+      [
+        { transform: `translateX(${moveX}px) scale(1)` },
+        { transform: `translateX(${moveX}px) scale(1.05)` },
+        { transform: `translateX(${moveX}px) scale(1)` }
+      ],
+      {
+        duration: 300, // ms
+        easing: "ease-in-out"
+      }
+    );
+    
     // si tenés 2 imágenes para forward/backward, actualizalas a las dos
     if ((scrollingDown && direction === 1) || (!scrollingDown && direction === -1)) {
       img.src = 'img/eduardo/lobo_mar.png';
@@ -100,10 +113,51 @@ function handleScroll() {
 }
 
 
-// const wolves = document.querySelectorAll('.sea-wolf');
+const seaWolves = document.querySelectorAll('.sea-wolf');
 
-// wolves.forEach(wolf => {
-//     wolf.addEventListener('click', () => {
-//         alert('¡Auuuuuuuuu! 🐺🌕');
-//     });
-// });
+seaWolves.forEach(wolf => {
+  const wolfPack = wolf.parentElement.querySelector('.wolf-pack');
+  wolf.addEventListener('click', () => {
+    wolfPack.classList.add('show');
+    setTimeout(() => {
+      wolfPack.classList.remove('show');
+    }, 4000);
+  });
+});
+
+
+
+
+function createStar() {
+  const star = document.createElement("img");
+  star.src = "img/eduardo/estrella.png"; 
+  star.classList.add("star");
+
+   // tamaño random entre 10px y 40px
+  const size = Math.random() * 60 + 40;  
+  star.style.width = size + "px";
+  star.style.height = size + "px";
+
+  // posición horizontal random
+  star.style.left = Math.random() * window.innerWidth + "px";
+  // duración random de caída
+  const duration = 5 + Math.random() * 2;
+  star.style.animationDuration = duration + "s";
+
+  document.body.appendChild(star);
+
+  // eliminar cuando termine animación
+  star.addEventListener("animationend", () => {
+    star.remove();
+  });
+}
+
+window.addEventListener("scroll", () => {
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+    // llegaste al final → largar lluvia
+    for (let i = 0; i < 15; i++) {
+      setTimeout(createStar, i * 180); // intervalo entre estrellas
+    }
+  }
+});
+
