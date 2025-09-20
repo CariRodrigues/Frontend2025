@@ -89,17 +89,26 @@ a {
 }
 
 /*Header principal*/
-
+/*
 #mainheader{
-    background-color: var(--color-encabezado);
-    height: 50vh;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
+    background-image: url("../img/portada.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    color: white;
+}
+*/
+#mainheader {
+  background-color: var(--color-encabezado);
+  height: 50vh;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 
-#navbar {
+.navbar {
   display: flex;
-  height: 10vh;
+  height: 50px;
   justify-content: space-between;
   align-items: center;
   background-color: var(--color-encabezado);
@@ -183,6 +192,10 @@ a:hover {
 }
 
 
+
+
+
+
 #encabezado1 {
   text-align: center;
   padding-top: 100px;
@@ -218,6 +231,7 @@ a:hover {
   height: 10vh;
   color: var(--color-fondo);
 }
+
 .seccion {
   padding: 40px 20px;
 }
@@ -247,14 +261,16 @@ a:hover {
   background-color: var(--color-secundario);
   max-width: 35%;
 }
- /* Sección 1: 2 columnas */
+
+/* Sección 1: 2 columnas */
 .seccion-1-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr; /* dos columnas iguales */
-      gap: 100px;
-      max-width: 1000px; 
-      margin: 0 auto;
-      align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* dos columnas iguales */
+  gap: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
 }
 
 .texto-columna {
@@ -265,9 +281,10 @@ a:hover {
 
 .foto-perfil {
   max-width: 100%;
-  height: 280px;
-  border-radius: 45%; /* Hace la imagen redonda */
-  filter: grayscale(80%);
+  height: 300px;
+  border-radius: 50%;
+  /* Hace la imagen redonda */
+  filter: grayscale(100%);
 }
 
 /* Sección 2 - skills - 3 columnas*/

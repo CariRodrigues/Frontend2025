@@ -13,7 +13,7 @@ botonModo.addEventListener('click', () => {
     }
 });
 
-// JS para abrir/cerrar menú al clickear
+//JS para abrir/cerrar menú al clickear
 document.querySelectorAll(".dropbtn").forEach(btn => {
     btn.addEventListener("click", e => {
         e.preventDefault(); // evita que salte al inicio
@@ -21,6 +21,8 @@ document.querySelectorAll(".dropbtn").forEach(btn => {
         menu.style.display = menu.style.display === "block" ? "none" : "block";
     });
 });
+
+
 
 // Popup
 document.addEventListener('DOMContentLoaded', () => {
