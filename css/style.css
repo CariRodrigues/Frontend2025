@@ -474,16 +474,16 @@ footer p {
 /* Responsive Design */
 /*Móviles pequeños (hasta 400px) */
 @media (max-width: 400px) {
-  #navbar{
-    display: flex;
-  }
+ .equipo {
+  font-size: 2rem; 
+}
  #texto .container{
     flex-direction: column;
     padding: 40px;
  }
- .equipo {
-  font-size: 2rem; 
-}
+ #navbar{
+    display: flex;
+  }
   .nav-links{
     background-color: var(--color-encabezado);
     flex-direction: column;
@@ -504,9 +504,7 @@ footer p {
   .menu-toggle {
     display: block; /* se muestra el botón en móvil */
   }
-  .texto-columna h2{
-    font-size: 0.7m;
-  }
+  
   .seccion-1-grid{
     gap: 15px;
   } h2{
@@ -530,7 +528,49 @@ footer p {
 
  /* Tablets o pantallas medianas (hasta 900px) */
 @media (max-width: 900px) and (min-width: 401px) {
+   #navbar{
+    display: flex;
+  }
+  .nav-links{
+    background-color: var(--color-encabezado);
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    margin-top: 10px;
+    display: none; /* enlaces ocultos por defecto */ 
+    position: absolute;
+    top: 100%;  /* debajo del navbar */
+    right: 0;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1000;
+  }
+  .nav-links.show {
+    display: flex; /* al activarse, se muestran */
+  }
+  .menu-toggle {
+    display: block; /* se muestra el botón en móvil */
+  }
   
+  .seccion-1-grid{
+    gap: 30x;
+  } h2{
+    font-size: 1em;
+  }p{
+    font-size: 0.7em;
+  }.foto-perfil{
+    max-height: 10em;
+  }
+  .carrusel{
+    max-width: 60%
+  }
+  .skills-grid {
+  grid-template-columns: 1fr 1fr; /* dos columnas iguales */
+  grid-template-rows: auto auto;  /* dos filas */
+}
+.skills-grid> :last-child{
+  grid-column: 1 / span 2; /* 👈 ocupa las dos columnas */
+}
 }
 
 /* 🔹 Escritorios grandes (desde 1200px) */
