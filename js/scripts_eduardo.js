@@ -141,7 +141,7 @@ function createStar() {
   // posición horizontal random
   star.style.left = Math.random() * window.innerWidth + "px";
   // duración random de caída
-  const duration = 5 + Math.random() * 2;
+  const duration = 3 + Math.random() * 2;
   star.style.animationDuration = duration + "s";
 
   document.body.appendChild(star);
@@ -156,7 +156,7 @@ window.addEventListener("scroll", () => {
   if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
     // llegaste al final → largar lluvia
     for (let i = 0; i < 15; i++) {
-      setTimeout(createStar, i * 180); // intervalo entre estrellas
+      setTimeout(createStar, i * 250); // intervalo entre estrellas
     }
   }
 });

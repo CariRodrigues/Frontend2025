@@ -88,15 +88,19 @@ body {
 /* || MAIN */
 
 header {
-    background: url("../img/eduardo/eduardo_header.png") no-repeat center/cover;
-    background-position: top center;
+    background: url("../img/eduardo/eduardo_header.png") no-repeat center top;
+    background-size: cover;
+    width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
+    background-position: top center;
+    position: relative;
 }
 
 .header-information {
     display: flex;
     justify-content: space-between;
-    height: 100vh;
+    height: 100%;
 }
 
 .header-left {
@@ -369,3 +373,126 @@ header,
   }
 }
 
+
+
+/* || MEDIA QUERIES */
+
+/* Móviles pequeños */
+@media screen and (max-width: 400px) {
+    .header-information {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: auto; /* que se ajuste al contenido */
+    }
+
+    .header-left, .header-right {
+        margin: 1rem 0;
+        padding: 0.5rem;
+        align-self: center;
+    }
+
+    .name_edu {
+        font-size: 2rem;
+    }
+
+    .lastname_edu {
+        font-size: 3rem;
+    }
+
+    .city_edu {
+        font-size: 1.5rem;
+    }
+
+    .sun_icon {
+        width: 5rem;
+        top: 40%; /* ajustar la posición del sol */
+        left: 50%;
+    }
+
+    .age_number {
+        font-size: 4rem;
+    }
+
+    .age_years {
+        font-size: 2rem;
+    }
+}
+
+/* Tablets / pantallas medianas */
+@media screen and (max-width: 800px) and (min-width: 401px) {
+    .header-information {
+        flex-direction: row; 
+        justify-content: center; 
+        align-items: flex-end; 
+        height: 100vh; 
+        padding-bottom: 2rem; 
+    }
+
+     /* Quitar align-self individual si lo tenías */
+    .header-left,
+    .header-right,
+    .age_number {
+        align-self: auto; /* para que tomen align-items del contenedor */
+        margin-bottom: 1rem;
+    }
+
+
+
+    .name_edu {
+        font-size: 3rem;
+    }
+
+    .lastname_edu {
+        font-size: 4.5rem;
+    }
+
+    .city_edu {
+        font-size: 2.5rem;
+    }
+
+    .sun_icon {
+        width: 8rem;
+    }
+
+    .age_number {
+        font-size: 6rem;
+    }
+
+    .age_years {
+        font-size: 3rem;
+    }
+}
+
+/* Escritorio grande */
+/* @media screen and (min-width: 1200px) {
+    .header-information {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .name_edu {
+        font-size: 4rem;
+    }
+
+    .lastname_edu {
+        font-size: 6rem;
+    }
+
+    .city_edu {
+        font-size: 3.2rem;
+    }
+
+    .sun_icon {
+        width: 12rem;
+    }
+
+    .age_number {
+        font-size: 8rem;
+    }
+
+    .age_years {
+        font-size: 4rem;
+    }
+} */
