@@ -448,7 +448,7 @@ footer p {
 /* Responsive Design */
 /*Móviles pequeños (hasta 400px) */
 @media (max-width: 400px) {
-  
+   
   .seccion-1-grid{
     gap: 15px;
   } h2{
