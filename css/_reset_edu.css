@@ -1,0 +1,64 @@
+/* ===== RESET & CROSS-BROWSER CONSISTENCY ===== */
+
+/* 1. Remove default spacing and set box-sizing */
+*,
+*::before,
+*::after,
+html, 
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Remove default list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 3. Remove default link styles */
+a {
+  /* text-decoration: none; */
+  color: inherit; /* inherit color from parent */
+}
+
+/* 4. Images: remove inline gap & scaling issues */
+img {
+  display: block;     /* removes baseline spacing */
+  max-width: 100%;    /* responsive scaling */
+  height: auto;       /* keep aspect ratio */
+  object-fit: contain; /* prevent distortion if you use fixed width/height */
+}
+
+/* 5. Inputs & buttons: remove browser-specific styling */
+input,
+button,
+textarea,
+select {
+  font: inherit;      /* inherit font */
+  border: none;       /* remove default borders */
+  outline: none;      /* remove focus outline (optional, style it manually if needed) */
+  background: none;   /* remove default background */
+}
+
+/* 6. Headings and paragraphs: consistent line-height */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  line-height: 1;
+  font-weight: normal;
+}
+
+/* 7. Form elements spacing */
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 8. Body & main layout */
+body {
+  font-family: 'Lucida Sans', sans-serif;
+  line-height: 1.4;
+  color: #000;
+}

@@ -1,149 +1,257 @@
+/* || IMPORTAR FUENTES DE GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+/* || VARIABLES */
 :root {
-    --color-primary: #ff6b6b;          /* Rojo coral */
-    --color-secondary: #4ecdc4;        /* Verde menta */
-    --color-text-primary: #34495e;     /* Gris carbón */
-    --color-text-secondary: #95a5a6;   /* Gris claro */
-    --color-background-light: #f7f7f7;
-    --color-background-card: #ffffff;
-    --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.1);
-    --shadow-strong: 0 10px 30px rgba(0, 0, 0, 0.2);
+    /* || VARIABLES DE COLORES */
+    --color-primary-text: #222;
+    --color-secondary-text: #7f8c8d;
+    --color-background-body: #C4CFCC;
+    --color-background-section: white;
+    --color-background-navbar: rgba(40, 75, 99, 0.5);
+    --color-heading: #2c3e50;
+    --color-accent: #3498db;
+    --color-light-gray: #ccc;
+    --color-white: #FFFFFF;
+    --color-white-yellow: #ebe592;
+    --color-white-yellow-2: #99942f;
+   
+    /* || VARIABLE DE FONTS */
+    --font-primary: 'Open Sans', sans-serif;
+    --font-secondary: 'Playfair Display', serif;
+
+    /* || FONT SIZE */
+    --font-size-sm: 0.875rem; /* 14px */
+    --font-size-md: 1rem;     /* 16px */    
+    --font-size-lg: 1.25rem;  /* 20px */
+    --font-size-xl: 1.5rem;   /* 24px */
+
+    /* || VARIABLE DE TAMAÑOS */
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 30px;
+    --spacing-xl: 2rem;
+    --spacing-nav: 1.5rem;
+
+    /* || VARIABLE DE ESTILO */
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos generales */
+/* || GENERAL */
 
-
-/* Cursor personalizado */
-.custom-cursor {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: var(--color-secondary);
-    mix-blend-mode: exclusion;
-    position: absolute;
-    pointer-events: none;
-    z-index: 9999;
-    transition: width 0.3s ease, height 0.3s ease;
+body {
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: var(--color-background-body);
+    color: var(--color-primary-text);
 }
 
-/* Navegación del encabezado */
+/* || NAVBAR */
+
+.navbar,
+.dropdown-menu {
+    background-color: var(--color-background-navbar);
+}
 
 
-/* Contenido principal */
-.main-content {
-    flex-grow: 1;
+.dropdown-menu{
+    margin-top: 10px;
+    z-index: 10; 
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1; /* Muestra el menú al hacer hover */
+    visibility: visible; /* Lo hace clickeable */
+}
+
+.dropdown-menu li a:hover,
+.nav-links a:hover {
+    background-color: transparent; 
+    color: var(--color-white-yellow);
+    
+}
+
+.dropdown-bridge {
+  position: absolute;
+  top: 100%; /* justo debajo del botón */
+  left: 0;
+  width: 150px;   /* ancho del puente */
+  height: 100px;   /* altura del puente */
+  z-index: 9;
+}
+
+/* || MAIN */
+
+header {
+    background: url("../img/eduardo/eduardo_header.png") no-repeat center/cover;
+    background-position: top center;
+    height: 100vh;
+}
+
+.header-information {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.header-left {
+    margin: 3rem 0.8rem;
+    padding: 1.5rem 1rem;
+    align-self: flex-end;
+}
+.name_edu {
+    font-family: var(--font-primary);
+    font-size: 4rem;
+    margin: 0;
+    color: var(--color-white-yellow);
+}
+
+.lastname_edu {
+    font-family: var(--font-primary);
+    font-size: 6rem;
+    font-weight: bold;
+    margin: 0;
+    color: var(--color-white-yellow);
+    
+}
+
+.header-right {
+    margin: 3rem 0.8rem;
+    padding: 1.5rem 1rem;
+    align-self: center;
+}
+
+
+.city-container {
+    position: relative; 
+    text-align: center; 
+}
+
+@keyframes spin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg); 
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg); 
+    }
+}
+
+.sun_icon {
+    position: absolute; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    transform-origin: center;
+    width: 12rem; 
+    height: auto; 
+    animation: spin 10s linear infinite;
+}
+
+
+.city_edu {
+    font-family: var(--font-primary);
+    font-size: 3.2rem;
+    font-weight: bold;
+    margin: 0 0 3rem 0;
+    color: var(--color-white);
+    text-shadow: 0 0 10px var(--color-white-yellow-2);
+    position: relative; 
+    z-index: 1; 
+}
+
+.age_number {
+    font-family: var(--font-primary);
+    font-size: 8rem;
+    font-weight: bold;
+    margin: 5rem 0 5rem 0;
+    color: var(--color-white-yellow);
+}
+
+.age_years {
+    font-size: 4rem;
+}
+
+.main-top-container {
+    background: url("../img/eduardo/eduardo_background_01.png") no-repeat center/cover;
+    background-position: top center;
+    height: 100vh;
+}
+
+.main-middle-container {
+    background: url("../img/eduardo/eduardo_background_02.png") no-repeat center/cover;
+    background-position: top center;
+    height: 100vh;
+}
+
+.main-bottom-container {
+    background: url("../img/eduardo/eduardo_background_03.png") no-repeat center/cover;
+    background-position: top center;
+    height: 100vh;
+}
+
+header,
+.main-top-container,
+.main-middle-container,
+.main-bottom-container {
+    background-color: rgba(20, 27, 20, 0.1); /* Capa negra translúcida */
+    background-blend-mode: darken; /* Mezcla el color con la imagen */
+}
+
+
+/* || CARDS */
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
     justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.card {
+    background-color: var(--color-background-section);
+    color: var(--color-primary-text);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
     padding: 1rem;
-    width: 100%;
-}
-
-/* Tarjeta de perfil */
-.profile-card {
-    background-color: var(--color-background-card);
-    padding: 2rem;
-    width: 100%;
-    max-width: 64rem;
-    /* 1024px */
-    border-radius: 2rem;
-    /* 32px */
-    box-shadow: var(--shadow-light);
-    transition: box-shadow 0.3s ease;
-}
-
-.profile-card:hover {
-    box-shadow: var(--shadow-strong);
-}
-
-.card-inner-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
-    /* 24px */
-}
-
-.profile-info-section {
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 250px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.profile-image-container {
-    transform-style: preserve-3d;
-    transition: all 0.5s cubic-bezier(.25, .8, .25, 1);
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
 }
 
-.profile-image {
-    transform: translateZ(20px);
-    border-radius: 12px;
-    border: 3px solid var(--color-secondary);
-    width: 10rem;
-    height: 10rem;
+.card-img {
+    width: 100%;
+    height: 150px;
     object-fit: cover;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
     margin-bottom: 1rem;
 }
 
-/* Secciones de detalles */
-.details-section {
-    flex-grow: 1;
+.parallax-card {
+    transition: transform 0.2s ease; 
+    transform-style: preserve-3d;  
 }
 
-.section-title {
-    font-size: 1.25rem;
-    /* 20px */
-    font-weight: 700;
-    color: var(--color-primary);
-    margin-bottom: 0.5rem;
-    /* 8px */
+
+.main-top-container,
+.main-middle-container,
+.main-bottom-container {
+    position: relative; /* ahora los lobos se moverán dentro de cada sección */
 }
 
-.section-list {
-    list-style-type: disc;
-    padding-left: 1.25rem;
-    /* 20px */
-    list-style-position: inside;
-    color: var(--color-text-primary);
-}
 
-.section-list li {
-    margin-bottom: 0.25rem;
-    /* 4px */
-}
-
-/* Pie de página */
-.footer {
-    width: 100%;
-    text-align: center;
-    padding: 1rem;
-    color: var(--color-text-secondary);
-    font-size: 0.875rem;
-    /* 14px */
-}
-
-/* Responsive Design */
-@media (min-width: 768px) {
-    .profile-card {
-        padding: 3rem;
-        /* 48px */
-    }
-
-    .card-inner-container {
-        flex-direction: row;
-        align-items: center;
-        gap: 3rem;
-        /* 48px */
-    }
-
-    .profile-info-section {
-        align-items: flex-start;
-        text-align: left;
-    }
-
-    .profile-image {
-        width: 16rem;
-        height: 16rem;
-    }
+.sea-wolf {
+    position: absolute;
+    bottom: 10px;  
+    width: 100px;
+    height: auto;
+    pointer-events: none;
 }
