@@ -106,9 +106,9 @@ a {
   border-bottom-right-radius: 2px;
 }
 
-#navbar {
+.navbar {
   display: flex;
-  height: 10vh;
+  height: 50px;
   justify-content: space-between;
   align-items: center;
   background-color: var(--color-encabezado);
