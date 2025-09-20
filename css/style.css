@@ -248,14 +248,14 @@ a:hover {
   max-width: 35%;
 }
  /* Sección 1: 2 columnas */
-    .seccion-1-grid {
+.seccion-1-grid {
       display: grid;
       grid-template-columns: 1fr 1fr; /* dos columnas iguales */
       gap: 100px;
       max-width: 1000px; 
       margin: 0 auto;
       align-items: center;
-    }
+}
 
 .texto-columna {
   font-size: 18px;
@@ -400,4 +400,80 @@ a:hover {
 }
 
 
+/* Popup con imagen */
+#popup {
+  position: absolute;
+  display: none;
+  z-index: 9999;
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  
+  /* Escalado proporcional */
+  max-width: 20vw;   /* máximo 40% del ancho de la pantalla */
+  max-height: 60vh;  /* máximo 60% de la altura de la pantalla */
+  overflow: auto;    /* si aún así es muy grande, habilita scroll */
+}
 
+#popup div {
+  font-size: clamp(12px, 1.5vw, 13px);
+  text-align: center;
+  font-weight: 600;
+}
+
+#popup img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* mantiene proporciones */
+  border-radius: 6px;
+}
+
+
+
+/* || FOOTER */
+
+footer {
+  background-color: var(--color-encabezado);
+  padding: 5px;
+  text-align: center;
+
+}
+
+footer p {
+  color: var(--color-fondo);
+  font-size: 0.8rem;
+}
+
+/* Responsive Design */
+/*Móviles pequeños (hasta 400px) */
+@media (max-width: 400px) {
+  
+  .seccion-1-grid{
+    gap: 15px;
+  } h2{
+    font-size: 1em;
+  }p{
+    font-size: 0.7em;
+  }.foto-perfil{
+    max-height: 10em;
+  }
+
+  .music-grid{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .music1 , .music2, .music3 , .music4{
+    max-height: 10em;
+  }
+
+ }
+
+ /* Tablets o pantallas medianas (hasta 900px) */
+@media (max-width: 900px) and (min-width: 401px) {
+  
+}
+
+/* 🔹 Escritorios grandes (desde 1200px) */
+@media (min-width: 1200px) {
+  
+}
