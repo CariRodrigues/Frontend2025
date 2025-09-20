@@ -191,3 +191,67 @@ header {
     background-position: top center;
     height: 100vh;
 }
+
+header,
+.main-top-container,
+.main-middle-container,
+.main-bottom-container {
+    background-color: rgba(20, 27, 20, 0.1); /* Capa negra translúcida */
+    background-blend-mode: darken; /* Mezcla el color con la imagen */
+}
+
+
+/* || CARDS */
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.card {
+    background-color: var(--color-background-section);
+    color: var(--color-primary-text);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+.card-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    margin-bottom: 1rem;
+}
+
+.parallax-card {
+    transition: transform 0.2s ease; 
+    transform-style: preserve-3d;  
+}
+
+
+.main-top-container,
+.main-middle-container,
+.main-bottom-container {
+    position: relative; /* ahora los lobos se moverán dentro de cada sección */
+}
+
+
+.sea-wolf {
+    position: absolute;
+    bottom: 10px;  
+    width: 100px;
+    height: auto;
+    pointer-events: none;
+}
