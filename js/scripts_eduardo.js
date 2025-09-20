@@ -100,10 +100,24 @@ function handleScroll() {
 }
 
 
-// const wolves = document.querySelectorAll('.sea-wolf');
+// const seaWolf = document.querySelector('.sea-wolf');
+// const wolfPack = document.querySelector('.wolf-pack');
 
-// wolves.forEach(wolf => {
-//     wolf.addEventListener('click', () => {
-//         alert('¡Auuuuuuuuu! 🐺🌕');
-//     });
+// seaWolf.addEventListener('click', () => {
+//     wolfPack.classList.add('show');   
+//     setTimeout(() => {
+//         wolfPack.classList.remove('show'); 
+//     }, 4000); 
 // });
+
+const seaWolves = document.querySelectorAll('.sea-wolf');
+
+seaWolves.forEach(wolf => {
+    const wolfPack = wolf.parentElement.querySelector('.wolf-pack');
+    wolf.addEventListener('click', () => {
+        wolfPack.classList.add('show');
+        setTimeout(() => {
+            wolfPack.classList.remove('show');
+        }, 4000);
+    });
+});
