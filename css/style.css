@@ -301,11 +301,9 @@ a:hover {
   /* Centra horizontalmente */
   padding: 20px;
 }
-
 .skill-text {
   color: var(--color-fondo-claro);
 }
-
 .skills-grid div {
   background-color: var(--color-secundario);
   padding: 40px 20px;
