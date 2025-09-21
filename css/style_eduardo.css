@@ -98,7 +98,7 @@ body {
 /* || MAIN */
 
 header {
-    background: url("../img/eduardo/eduardo_header.png") no-repeat center top;
+    background: url("../img/eduardo/eduardo_header.webp") no-repeat center top;
     background-size: cover;
     width: 100vw;
     height: 100vh;
@@ -195,19 +195,19 @@ header {
 .main-top-container {
     padding-top: 100vh;
     box-sizing: border-box;
-    background: url("../img/eduardo/eduardo_background_01.png") no-repeat center/cover;
+    background: url("../img/eduardo/eduardo_background_01.webp") no-repeat center/cover;
     background-position: top center;
     height: 100vh;
 }
 
 .main-middle-container {
-    background: url("../img/eduardo/eduardo_background_02.png") no-repeat center/cover;
+    background: url("../img/eduardo/eduardo_background_02.webp") no-repeat center/cover;
     background-position: top center;
     height: 100vh;
 }
 
 .main-bottom-container {
-    background: url("../img/eduardo/eduardo_background_03.png") no-repeat center/cover;
+    background: url("../img/eduardo/eduardo_background_03.webp") no-repeat center/cover;
     background-position: top center;
     height: 100vh;
 }
@@ -267,6 +267,10 @@ header,
     object-fit: cover;
     border-radius: var(--border-radius);
     margin-bottom: 1rem;
+}
+
+.card p {
+    font-weight: 600;
 }
 
 /* || ANIMACIONES */
