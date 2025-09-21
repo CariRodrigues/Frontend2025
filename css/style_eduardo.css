@@ -251,7 +251,7 @@ header,
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     padding: 1rem;
-    width: 250px;
+    width: 28vw;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -293,7 +293,7 @@ header,
 /* el wrapper que movemos */
 .sea-wolf-wrap {
     --width-wolf: 35vh;
-    --msg-offset: 12%; 
+    --msg-offset: 12%;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -419,6 +419,7 @@ header,
         justify-content: center;
         align-items: center;
         text-align: center;
+        gap: 17rem;
         height: auto;
         /* que se ajuste al contenido */
     }
@@ -432,14 +433,16 @@ header,
 
     .name_edu {
         font-size: 2rem;
+        color: var(--color-white);
     }
 
     .lastname_edu {
         font-size: 3rem;
+        color: var(--color-white);
     }
 
     .city_edu {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .sun_icon {
@@ -450,16 +453,68 @@ header,
     }
 
     .age_number {
-        font-size: 4rem;
+        font-size: 3rem;
+        color: var(--color-white);
+        margin-top: 0.5rem;
     }
 
     .age_years {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        color: var(--color-white);
     }
 }
 
-/* Tablets / pantallas medianas */
-@media screen and (max-width: 800px) and (min-width: 401px) {
+@media screen and (min-width: 401px) and (max-width: 600px) {
+    .header-information {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 10rem;
+        height: auto;
+    }
+
+    .header-left,
+    .header-right {
+        margin: 1rem 0;
+        padding: 0.5rem;
+        align-self: center;
+    }
+
+    .name_edu {
+        font-size: 2.5rem;
+        color: var(--color-white);
+    }
+
+    .lastname_edu {
+        font-size: 3.5rem;
+        color: var(--color-white);
+    }
+
+    .city_edu {
+        font-size: 2.2rem;
+    }
+
+    .sun_icon {
+        width: 6rem;
+        top: 45%;
+        left: 50%;
+    }
+
+    .age_number {
+        font-size: 3.5rem;
+        color: var(--color-white);
+        margin-top: 0.5rem;
+    }
+
+    .age_years {
+        font-size: 1.9rem;
+        color: var(--color-white);
+    }
+}
+
+
+@media screen and (min-width: 601px) and (max-width: 800px) {
     .header-information {
         flex-direction: row;
         justify-content: center;
@@ -468,23 +523,21 @@ header,
         padding-bottom: 2rem;
     }
 
-    /* Quitar align-self individual si lo tenías */
     .header-left,
     .header-right,
     .age_number {
         align-self: auto;
-        /* para que tomen align-items del contenedor */
         margin-bottom: 1rem;
     }
 
-
-
     .name_edu {
         font-size: 3rem;
+        color: var(--color-white);
     }
 
     .lastname_edu {
         font-size: 4.5rem;
+        color: var(--color-white);
     }
 
     .city_edu {
@@ -496,13 +549,20 @@ header,
     }
 
     .age_number {
-        font-size: 6rem;
+        font-size: 4rem;
+        color: var(--color-white);
     }
 
     .age_years {
-        font-size: 3rem;
+        font-size: 2rem;
+        color: var(--color-white);
+    }
+
+    .section-title {
+        font-size: 2rem;
     }
 }
+
 
 /* Escritorio grande */
 /* @media screen and (min-width: 1200px) {
