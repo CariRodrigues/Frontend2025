@@ -65,6 +65,8 @@ function handleScroll() {
 
   sections.forEach((section, index) => {
     const wrapper = wrappers[index];
+    
+
     if (!wrapper) return;
     const img = wrapper.querySelector('.sea-wolf');
     const reflection = wrapper.querySelector('.sea-wolf-reflection');
@@ -127,21 +129,24 @@ seaWolves.forEach(wolf => {
 
 
 
+const footer = document.querySelector("footer");
+let starsActive = false;
 
 function createStar() {
   const star = document.createElement("img");
   star.src = "img/eduardo/estrella.png"; 
   star.classList.add("star");
 
-   // tamaño random entre 10px y 40px
+  // tamaño random entre 40px y 100px
   const size = Math.random() * 60 + 40;  
   star.style.width = size + "px";
   star.style.height = size + "px";
 
   // posición horizontal random
   star.style.left = Math.random() * window.innerWidth + "px";
+
   // duración random de caída
-  const duration = 5 + Math.random() * 2;
+  const duration = 3 + Math.random() * 2;
   star.style.animationDuration = duration + "s";
 
   document.body.appendChild(star);
@@ -152,12 +157,29 @@ function createStar() {
   });
 }
 
+// función que crea varias estrellas con un pequeño intervalo
+function createStarsBatch(count = 15, interval = 250) {
+  for (let i = 0; i < count; i++) {
+    setTimeout(createStar, i * interval);
+  }
+}
+
+// detectar cuando el footer entra en pantalla
 window.addEventListener("scroll", () => {
-  if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-    // llegaste al final → largar lluvia
-    for (let i = 0; i < 15; i++) {
-      setTimeout(createStar, i * 180); // intervalo entre estrellas
-    }
+  const footerTop = footer.getBoundingClientRect().top;
+
+  if (!starsActive && footerTop <= window.innerHeight) {
+    starsActive = true;
+
+    // crear estrellas cada 1 segundo mientras el usuario sigue viendo el footer
+    const starsInterval = setInterval(() => {
+      const footerTopNow = footer.getBoundingClientRect().top;
+      if (footerTopNow > window.innerHeight) {
+        clearInterval(starsInterval); 
+        starsActive = false;
+      } else {
+        createStarsBatch(10, 150); 
+      }
+    }, 1000);
   }
 });
-

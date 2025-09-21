@@ -1,49 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/_reset_edu.css">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/main.js" defer></script>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bitacora.css">
     <script src="./js/main.js" defer></script>
     <title>Bitácora</title>
 </head>
 
-
 <body>
-    <header >
+    <header>
         <nav class="navbar" id="navbar">
             <div class="logo" >
                 <img src="img/logo.png" alt="Codebolts Six Logo">
             </div>
+            <button class="menu-toggle">☰</button>
             <ul class="nav-links">
                <li><a href="index.html"> Inicio </a></li>
                <li class="dropdown">
                     <a href="#" class="dropbtn">Integrantes</a>
                     <ul class="dropdown-menu">
                         <li><a href="/eduardo.html">Eduardo</a></li>
-                        <li><a href="/crc.html">Carina </a></li>
+                        <li><a href="#">Carina •</a></li>
                         <li><a href="#">...</a></li>
                     </ul>
                </li>
                <li><a href="bitacora.html">Bitácora</a></li>  
             </ul>
         </nav>
-
     </header>
-    <main class="main-especial">
+    <main>
+        <h1>Bitácora</h1>
 
-        <p>Esta sección debe contener una descripción del proceso de desarrollo del proyecto,
-            incluyendo:
-            -Decisiones de diseño tomadas por el equipo.
-            -Dificultades encontradas y cómo se resolvieron.
-            -Cambios importantes realizados durante la implementación.
-    
-
-        <p>Esta sección debe contener una descripción del proceso de desarrollo del proyecto,
+        <p>
+            Esta sección conteniene una descripción del proceso de desarrollo del proyecto,
             incluyendo:
             -Decisiones de diseño tomadas por el equipo.
             -Dificultades encontradas y cómo se resolvieron.
@@ -52,32 +45,83 @@
             La bitácora está pensada para registrar el proceso de trabajo y debe ampliarse en el TP2, y
             TP3, incorporando reflexiones sobre la evolución del proyecto.
         </p>
-        
+
         <ol>
             <li>05/09/25: Se definió el esquema de colores y tipografía.</li>
             <li>07/09/25: Implementadas animaciones en la portada.</li>
             <li>12/09/25: Ajustes de responsive en tablet (900px) y móvil (400px).</li>
             <li>18/09/25: Creación de páginas individuales de cada integrante.</li>
         </ol>
-    
 
 
-            La bitácora está pensada para registrar el proceso de trabajo y debe ampliarse en el TP2, y
-            TP3, incorporando reflexiones sobre la evolución del proyecto.
-        </p>
-        
-        <ol>
-            <li>05/09/25: Se definió el esquema de colores y tipografía.</li>
-            <li>07/09/25: Implementadas animaciones en la portada.</li>
-            <li>12/09/25: Ajustes de responsive en tablet (900px) y móvil (400px).</li>
-            <li>18/09/25: Creación de páginas individuales de cada integrante.</li>
-        </ol>
-    
+        <section>
+            <h2>Decisiones de Diseño</h2>
+            <p>
+                El equipo decidió utilizar una paleta de colores basada en tonos azules y grises para transmitir
+                profesionalismo y modernidad. Además, se seleccionó la tipografía 'Roboto' por su legibilidad y estilo
+                contemporáneo. Se optó por un diseño responsive para garantizar una experiencia óptima en dispositivos
+                móviles y tablets.
+            </p>
+        </section>
+
+        <section>
+            <h2>Dificultades Encontradas</h2>
+            <p>Durante el desarrollo, enfrentamos problemas con la implementación de animaciones en la portada, lo que
+                requirió investigar y aplicar técnicas de CSS avanzadas. También hubo desafíos al ajustar el diseño para
+                pantallas pequeñas, especialmente en la navegación, que se resolvieron utilizando media queries y
+                pruebas en diferentes dispositivos.</p>
+        </section>
+
+        <section>
+            <h2>Cambios Importantes</h2>
+            <p>Inicialmente, se planeó un diseño estático, pero se decidió incorporar interactividad mediante JavaScript
+                para mejorar la experiencia del usuario. Además, se reorganizó la estructura de carpetas del proyecto
+                para facilitar el mantenimiento y la colaboración entre los integrantes del equipo.</p>
+        </section>
+
+        <section>
+            <h2>Análisis Completo del Sistema</h2>
+            <h3>Archivos HTML</h3>
+            <p>El sistema incluye varias páginas HTML que representan diferentes secciones del sitio web:
+            <ul>
+                <li><strong>index.html:</strong> Página principal con información sobre el equipo y un diseño
+                    responsivo.</li>
+                <li><strong>eduardo.html:</strong> Perfil individual con detalles personales y un diseño personalizado.
+                </li>
+                <li><strong>crc.html:</strong> Perfil de Carina con una estructura similar al de Eduardo.</li>
+                <li><strong>bitacora.html:</strong> Sección dedicada a registrar el proceso de desarrollo del proyecto.
+                </li>
+            </ul>
+            </p>
+
+            <h3>Archivos CSS</h3>
+            <p>El diseño visual se gestiona mediante varios archivos CSS:
+            <ul>
+                <li><strong>_reset_edu.css:</strong> Archivo de reinicio para garantizar consistencia entre navegadores.
+                </li>
+                <li><strong>style_eduardo.css:</strong> Estilos específicos para la página de Eduardo, incluyendo
+                    variables de colores y tipografías personalizadas.</li>
+                <li><strong>style.css:</strong> Estilos generales del sitio, incluyendo soporte para modo oscuro y
+                    diseño responsivo.</li>
+            </ul>
+            </p>
+
+            <h3>Archivos JavaScript</h3>
+            <p>La interactividad del sitio se implementa con varios scripts:
+                <ul>
+                    <li><strong>main.js:</strong> Gestiona el modo oscuro, menús desplegables y popups interactivos.</li>
+                    <li><strong>scripts_eduardo.js:</strong> Añade efectos de paralaje y animaciones específicas para la
+                        página de Eduardo.</li>
+                    <li><strong>scripts_carina.js:</strong> Contiene funcionalidades específicas para la página de Carina,
+                        como el carrusel de imágenes.</li>
+                </ul>
+            </p>
+        </section>
     </main>
     <footer>
-      <p>Desarrollo de Sistemas Web (Front End) - IFTS29 - 2025</p>
+        <p>Desarrollo de Sistemas Web (Front End) - IFTS29 - 2025</p>
     </footer>
-</body>
 
+</body>
 
 </html>

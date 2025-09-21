@@ -15,16 +15,20 @@
     --color-white: #FFFFFF;
     --color-white-yellow: #ebe592;
     --color-white-yellow-2: #99942f;
-   
+
     /* || VARIABLE DE FONTS */
     --font-primary: 'Open Sans', sans-serif;
     --font-secondary: 'Playfair Display', serif;
 
     /* || FONT SIZE */
-    --font-size-sm: 0.875rem; /* 14px */
-    --font-size-md: 1rem;     /* 16px */    
-    --font-size-lg: 1.25rem;  /* 20px */
-    --font-size-xl: 1.5rem;   /* 24px */
+    --font-size-sm: 0.875rem;
+    /* 14px */
+    --font-size-md: 1rem;
+    /* 16px */
+    --font-size-lg: 1.25rem;
+    /* 20px */
+    --font-size-xl: 1.5rem;
+    /* 24px */
 
     /* || VARIABLE DE TAMAÑOS */
     --spacing-sm: 10px;
@@ -49,6 +53,7 @@ body {
     line-height: 1.6;
     background-color: var(--color-background-body);
     color: var(--color-primary-text);
+    overflow-x: hidden;
 }
 
 /* || NAVBAR */
@@ -59,44 +64,53 @@ body {
 }
 
 
-.dropdown-menu{
+.dropdown-menu {
     margin-top: 10px;
-    z-index: 10; 
+    z-index: 10;
 }
 
 .dropdown:hover .dropdown-menu {
-    opacity: 1; /* Muestra el menú al hacer hover */
-    visibility: visible; /* Lo hace clickeable */
+    opacity: 1;
+    /* Muestra el menú al hacer hover */
+    visibility: visible;
+    /* Lo hace clickeable */
 }
 
 .dropdown-menu li a:hover,
 .nav-links a:hover {
-    background-color: transparent; 
+    background-color: transparent;
     color: var(--color-white-yellow);
-    
+
 }
 
 .dropdown-bridge {
-  position: absolute;
-  top: 100%; /* justo debajo del botón */
-  left: 0;
-  width: 150px;   /* ancho del puente */
-  height: 100px;   /* altura del puente */
-  z-index: 9;
+    position: absolute;
+    top: 100%;
+    /* justo debajo del botón */
+    left: 0;
+    width: 150px;
+    /* ancho del puente */
+    height: 100px;
+    /* altura del puente */
+    z-index: 9;
 }
 
 /* || MAIN */
 
 header {
-    background: url("../img/eduardo/eduardo_header.png") no-repeat center/cover;
-    background-position: top center;
+    background: url("../img/eduardo/eduardo_header.png") no-repeat center top;
+    background-size: cover;
+    width: 100vw;
     height: 100vh;
+    /* overflow-x: hidden; */
+    background-position: top center;
+    position: relative;
 }
 
 .header-information {
     display: flex;
     justify-content: space-between;
-    height: 100vh;
+    height: 100%;
 }
 
 .header-left {
@@ -104,6 +118,7 @@ header {
     padding: 1.5rem 1rem;
     align-self: flex-end;
 }
+
 .name_edu {
     font-family: var(--font-primary);
     font-size: 4rem;
@@ -117,7 +132,7 @@ header {
     font-weight: bold;
     margin: 0;
     color: var(--color-white-yellow);
-    
+
 }
 
 .header-right {
@@ -128,27 +143,28 @@ header {
 
 
 .city-container {
-    position: relative; 
-    text-align: center; 
+    position: relative;
+    text-align: center;
 }
 
 @keyframes spin {
     from {
-        transform: translate(-50%, -50%) rotate(0deg); 
+        transform: translate(-50%, -50%) rotate(0deg);
     }
+
     to {
-        transform: translate(-50%, -50%) rotate(360deg); 
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }
 
 .sun_icon {
-    position: absolute; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     transform-origin: center;
-    width: 12rem; 
-    height: auto; 
+    width: 12rem;
+    height: auto;
     animation: spin 10s linear infinite;
 }
 
@@ -160,8 +176,8 @@ header {
     margin: 0 0 3rem 0;
     color: var(--color-white);
     text-shadow: 0 0 10px var(--color-white-yellow-2);
-    position: relative; 
-    z-index: 1; 
+    position: relative;
+    z-index: 1;
 }
 
 .age_number {
@@ -177,6 +193,8 @@ header {
 }
 
 .main-top-container {
+    padding-top: 100vh;
+    box-sizing: border-box;
     background: url("../img/eduardo/eduardo_background_01.png") no-repeat center/cover;
     background-position: top center;
     height: 100vh;
@@ -198,8 +216,10 @@ header,
 .main-top-container,
 .main-middle-container,
 .main-bottom-container {
-    background-color: rgba(20, 27, 20, 0.1); /* Capa negra translúcida */
-    background-blend-mode: darken; /* Mezcla el color con la imagen */
+    background-color: rgba(20, 27, 20, 0.1);
+    /* Capa negra translúcida */
+    background-blend-mode: darken;
+    /* Mezcla el color con la imagen */
 }
 
 /* || SECTIONS */
@@ -231,7 +251,7 @@ header,
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     padding: 1rem;
-    width: 250px;
+    width: 28vw;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -245,66 +265,82 @@ header,
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: var(--border-radius) ;
+    border-radius: var(--border-radius);
     margin-bottom: 1rem;
 }
 
 /* || ANIMACIONES */
 
 .parallax-card {
-    transition: transform 0.2s ease; 
-    transform-style: preserve-3d;  
+    transition: transform 0.2s ease;
+    transform-style: preserve-3d;
 }
 
 
-.sea-wolf {
-    position: absolute;
-    bottom: 10px;  
-    width: 100px;
-    height: auto;
-    /* pointer-events: none; */
-    cursor: pointer;
-    filter: drop-shadow(0 15px 8px rgba(0,0,0,0.5)); 
-}
 
 
 /* asegurar que las secciones sean contenedores posicionados */
+header,
 .main-top-container,
 .main-middle-container,
 .main-bottom-container {
-  position: relative;
-  overflow: visible; /* si hay overflow:hidden puede cortar la sombra */
+    position: relative;
+    overflow: visible;
+    /* overflow: hidden; */
+    /* si hay overflow:hidden puede cortar la sombra */
 }
 
 /* el wrapper que movemos */
 .sea-wolf-wrap {
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  width: 100%;       /* ajustar según el png */
-  /* pointer-events: none; */
-  cursor: pointer;
-  transform: translateX(-9999px); /* start fuera de pantalla; JS lo moverá */
-  will-change: transform;
-  z-index: 6;         /* por debajo de las cards (if cards z-index > 6) */
-  display: block;
+    --width-wolf: 35vh;
+    --msg-offset: 12%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: var(--width-wolf);
+    /* ajustar según el png */
+    /* pointer-events: none; */
+    cursor: pointer;
+    transform: translateX(-9999px);
+    /* start fuera de pantalla; JS lo moverá */
+    will-change: transform;
+    z-index: 6;
+    /* por debajo de las cards (if cards z-index > 6) */
+    /* display: none; */
+    /* overflow: hidden; */
+}
+
+.sea-wolf {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    /* pointer-events: none; */
+    cursor: pointer;
+    filter: drop-shadow(0 15px 8px rgba(0, 0, 0, 0.5));
 }
 
 
 /* imagen que será el "reflejo" (bajo la imagen real) */
 .sea-wolf-reflection {
-  position: absolute;
-  top: 100%;                   /* justo debajo de la imagen */
-  left: 0;
-  width: 100%;
-  height: auto;
-  transform: scaleY(-0.2);       /* voltear verticalmente */
-  transform-origin: top center;
-  opacity: 0.1;
-  filter: blur(4px) saturate(0.6) brightness(0.5);
-  z-index: 1;                  /* detrás de la imagen real */
-  pointer-events: none;
-  margin-top: 90px;             /* separación entre lobo y su reflejo */
+    position: absolute;
+    top: 100%;
+    /* justo debajo de la imagen */
+    left: 0;
+    width: 100%;
+    height: auto;
+    transform: scaleY(-0.2);
+    /* voltear verticalmente */
+    transform-origin: top center;
+    opacity: 0.1;
+    filter: blur(4px) saturate(0.6) brightness(0.5);
+    z-index: 1;
+    /* detrás de la imagen real */
+    pointer-events: none;
+    margin-top: 90px;
+    /* separación entre lobo y su reflejo */
 }
 
 
@@ -316,14 +352,16 @@ header,
 
 .wolf-message {
     position: absolute;
-    bottom: 95px; /* encima del lobo */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
+    bottom: 100%;
+    /* encima del lobo */
+    left: 55%;
+    transform: translateX(-50%) translateY(-108%);
+    width: calc(var(--width-wolf) * 0.8);
     opacity: 0;
     transition: opacity 0.3s ease;
-    pointer-events: none; 
-    z-index: 10; /* sobre el lobo */
+    pointer-events: none;
+    z-index: 10;
+    /* sobre el lobo */
 }
 
 /* Mostrar el mensaje al hacer hover en el contenedor */
@@ -333,39 +371,227 @@ header,
 
 .wolf-pack {
     position: absolute;
-    bottom: 0;            
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 200px;         
-    opacity: 0;           
-    pointer-events: none; 
+    width: calc(var(--width-wolf) * 1.5);
+    opacity: 0;
+    pointer-events: none;
     transition: opacity 0.5s ease, transform 0.5s ease;
-    z-index: -1;           
+    z-index: -1;
 }
 
 .wolf-pack.show {
-    opacity: 1; 
+    opacity: 1;
 }
 
 
 .star {
-  position: fixed;
-  top: -100px;             
-  /* width: 60px;              */
-  pointer-events: none;    
-  opacity: 0.8;
-  z-index: 9999;
-  animation: fall linear forwards;
+    position: fixed;
+    top: -100px;
+    /* width: 60px;              */
+    pointer-events: none;
+    opacity: 0.8;
+    z-index: 9999;
+    animation: fall linear forwards;
 }
 
 @keyframes fall {
-  from {
-    transform: translateY(0) rotate(0deg);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(110vh) rotate(360deg);
-    opacity: 0;
-  }
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
 }
 
+
+
+/* || MEDIA QUERIES */
+
+/* Móviles pequeños */
+@media screen and (max-width: 400px) {
+    .header-information {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 17rem;
+        height: auto;
+        /* que se ajuste al contenido */
+    }
+
+    .header-left,
+    .header-right {
+        margin: 1rem 0;
+        padding: 0.5rem;
+        align-self: center;
+    }
+
+    .name_edu {
+        font-size: 2rem;
+        color: var(--color-white);
+    }
+
+    .lastname_edu {
+        font-size: 3rem;
+        color: var(--color-white);
+    }
+
+    .city_edu {
+        font-size: 2rem;
+    }
+
+    .sun_icon {
+        width: 5rem;
+        top: 40%;
+        /* ajustar la posición del sol */
+        left: 50%;
+    }
+
+    .age_number {
+        font-size: 3rem;
+        color: var(--color-white);
+        margin-top: 0.5rem;
+    }
+
+    .age_years {
+        font-size: 1.8rem;
+        color: var(--color-white);
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 600px) {
+    .header-information {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 10rem;
+        height: auto;
+    }
+
+    .header-left,
+    .header-right {
+        margin: 1rem 0;
+        padding: 0.5rem;
+        align-self: center;
+    }
+
+    .name_edu {
+        font-size: 2.5rem;
+        color: var(--color-white);
+    }
+
+    .lastname_edu {
+        font-size: 3.5rem;
+        color: var(--color-white);
+    }
+
+    .city_edu {
+        font-size: 2.2rem;
+    }
+
+    .sun_icon {
+        width: 6rem;
+        top: 45%;
+        left: 50%;
+    }
+
+    .age_number {
+        font-size: 3.5rem;
+        color: var(--color-white);
+        margin-top: 0.5rem;
+    }
+
+    .age_years {
+        font-size: 1.9rem;
+        color: var(--color-white);
+    }
+}
+
+
+@media screen and (min-width: 601px) and (max-width: 800px) {
+    .header-information {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100vh;
+        padding-bottom: 2rem;
+    }
+
+    .header-left,
+    .header-right,
+    .age_number {
+        align-self: auto;
+        margin-bottom: 1rem;
+    }
+
+    .name_edu {
+        font-size: 3rem;
+        color: var(--color-white);
+    }
+
+    .lastname_edu {
+        font-size: 4.5rem;
+        color: var(--color-white);
+    }
+
+    .city_edu {
+        font-size: 2.5rem;
+    }
+
+    .sun_icon {
+        width: 8rem;
+    }
+
+    .age_number {
+        font-size: 4rem;
+        color: var(--color-white);
+    }
+
+    .age_years {
+        font-size: 2rem;
+        color: var(--color-white);
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+
+/* Escritorio grande */
+/* @media screen and (min-width: 1200px) {
+    .header-information {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .name_edu {
+        font-size: 4rem;
+    }
+
+    .lastname_edu {
+        font-size: 6rem;
+    }
+
+    .city_edu {
+        font-size: 3.2rem;
+    }
+
+    .sun_icon {
+        width: 12rem;
+    }
+
+    .age_number {
+        font-size: 8rem;
+    }
+
+    .age_years {
+        font-size: 4rem;
+    }
+} */
