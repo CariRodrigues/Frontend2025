@@ -6,9 +6,9 @@
 **Comisión:** A  
 
 
-- Rodrigues, Carina 
+- Rodrigues, Carina. 
 - Mendiola, Eduardo E. 
-- Integrante 3  
+- Herrera, Neuyin.  
 - Integrante 4  
 - Integrante 5  
 
@@ -17,7 +17,7 @@
 |---------------|-----------------|
 | Rodrigues, Carina     | [crc.html](juan.html) |
 | Mendiola, Eduardo E.   | [eduardo.html](maria.html) |
-| Integrante 3  | [integrante3.html](int3.html) |
+| Herrera, Neuyin  | [neuyin.html](neuyin.html) |
 | Integrante 4  | [integrante4.html](int4.html) |
 | Integrante 5  | [integrante5.html](int5.html) |
 
@@ -60,7 +60,7 @@ El proyecto incluye:
 ├── porfolios/
 │   ├── crc.html           # Página individual de Carina Rodrigues
 │   ├── eduardo.jpg        # Página individual de Eduardo Mendiola
-│   ├── int3.html          # Página individual del integrante 3
+│   ├── neuyin.html          # Página individual del integrante 3
 │   ├── int4.html          # Página individual del integrante 4
 │   └── int5.html          # Página individual del integrante 5
 ├── css/
@@ -68,7 +68,7 @@ El proyecto incluye:
 ├── js/
 │   ├── crc.js             # JS individual de Carina Rodrigues
 │   ├── eduardo.js         # JS individual de Eduardo Mendiola
-│   ├── int3.js            # JS individual del integrante 3
+│   ├── neuyin.js            # JS individual del integrante 3
 │   ├── int4.js            # JS individual del integrante 4
 │   ├── int5.js            # JS individual del integrante 5
 │   └── main.js            # Funciones dinámicas generales
@@ -76,11 +76,12 @@ El proyecto incluye:
 |   ├── screenshots
 |   |       ├── carina_screenshot.png     
 │   |       ├── eduardo_screenshot.png   
-│   |       ├── int3_screenshot.png       
+│   |       ├── neuyin_screenshot.png       
 │   |       ├── int4_screenshot.png       
 │   |       └── int5_screenshot.png       
 │   ├── car.jpg
 │   ├── eduardo.jpg
+|   ├── neuyin.png
 │   ├── logo.jpg
 │   └── portada.png
 └── README.md               # Este archivo
@@ -106,7 +107,7 @@ Cada integrante tiene un porfolio con:
 ### Eduardo Mendiola
 ![Captura Eduardo Mendiola](img/screenshots/eduardo_screenshot.png)
 
-### Int 3
+### Neuyin Herrera
 ![Captura Int 3](img/screenshots/int3_screenshot.png)
 
 ### Int 3
