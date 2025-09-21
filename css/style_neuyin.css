@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Doodle+Shadow&display=swap');
+
+:root {
+  --color-fondo: #ffffff;
+  /* Fondo principal (body) */
+  --color-texto-principal: #353535;
+  /* Texto general (gris oscuro) */
+  --color-secundario: #3C6E71;
+  /* Color secundario (verde azulado) */
+  --color-fondo-claro: #d9d9d9;
+  /* Fondo de secciones suaves o tarjetas */
+  --color-encabezado: #284b63;
+  /* Encabezados, barra de navegación, etc. */
+
+  --fuente-titulos: 'Montserrat', serif;
+  --fuente-texto: 'Roboto', sans-serif;
+}
+
+/*Reset*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*Estilos Main*/
+body {
+  background-color: var(--color-fondo);
+  font-family: var(--fuente-texto);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Modo oscuro */
+body.modo-oscuro {
+  --color-fondo: #121212;
+  --color-texto-principal: #f1f1f1;
+  --color-encabezado: #f1f1f1;
+  --color-fondo-claro: #2a2a2a;
+}
+
+#modoOscuroBtn {
+  background-color: var(--color-texto-principal);
+  color: var(--color-fondo);
+  border: none;
+  width: 60px;
+  height: 40px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 10px;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#modoOscuroBtn:hover .icono-modo {
+  background-color: var(--color-principal);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+  font-family: var(--fuente-titulos);
+  color: var(--color-texto-principal);
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+p {
+  color: var(--color-texto-principal);
+  font-size: 1rem;
+  margin: 10px 0;
+  font-family: var(--fuente-texto);
+}
+
+a {
+  text-decoration: none;
+}
+
+.equipo {
+  font-size: 3.5rem;
+  font-family: var(--fuente-titulos);  
+}
+
+/*Header principal*/
+#mainheader {
+  background-color: var(--color-encabezado);
+  height: 50vh;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.menu-toggle {/*menú hamburguesa oculto*/
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: var(--color-fondo-claro);
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-encabezado);
+  padding: 0 1rem;
+  position: relative;
+  z-index: 1000;
+}
+
+a:visited {
+  color: var(--color-texto-principal);
+}
+
+a:hover {
+  color: var(--color-secundario);
+}
+
+.logo img {
+  margin-top: 10px;
+  max-height: 50px;
+  max-width: 200px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  /* pone los <li> en fila */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+  position: relative;
+}
+
+.nav-links a {
+  color: var(--color-fondo-claro);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px;
+  display: block;
+}
+
+.nav-links a:hover {
+  color: var(--color-secundario);
+  /* o el color que quieras */
+}
+
+/*fin navbar*/
+/*desplegable "integrantes"*/
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  /* oculto por defecto */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  border-radius: 10%;
+  background: var(--color-encabezado);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 150px;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px;
+  border-radius: 20%;
+  color: var(--color-fondo-claro);
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background: var(--color-encabezado);
+  color: var(--color-secundario);
+}
+
+/* Mostrar al pasar el mouse */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+#encabezado1 {
+  text-align: center;
+  padding-top: 100px;
+
+  h1 {
+    font-weight: 300;
+    color: var(--color-fondo-claro);
+  }
+}
+
+#texto {
+  padding: 80px 0;
+
+  h2 {
+    line-height: 1.2em;
+    font-weight: 200;
+    padding-bottom: 40px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+
+    .content-column ul li {
+      list-style-type: none;
+    }
+  }
+}
+
+#header-secundario {
+  background-color: var(--color-encabezado);
+  height: 10vh;
+  color: var(--color-fondo);
+}
+
+.seccion {
+  padding: 40px 20px;
+}
+
+.seccion:nth-child(even) {
+  background-color: var(--color-fondo-claro);
+}
+
+#seccion2,
+#seccion3,
+#seccion4 h2 {
+  text-align: center;
+}
+
+.divisor-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--color-fondo-claro);
+  color: var(--color-secundario);
+}
+
+.linea {
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-secundario);
+  max-width: 35%;
+}
+
+/* Sección 1: 2 columnas */
+.seccion-1-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* dos columnas iguales */
+  gap: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.texto-columna {
+  font-size: 18px;
+  text-align: center;
+  color: var(--color-texto-principal);
+}
+
+.foto-perfil {
+  max-width: 100%;
+  height: 300px;
+  border-radius: 50%;
+  /* Hace la imagen redonda */
+  filter:none;
+  transition: filter 1s ease;
+}
+
+.foto-perfil:hover {
+  filter: grayscale(100%);
+}
+
+/* Sección 2 - Mis habilidades*/
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  /* Ancho máximo del grid */
+  margin: 0 auto;
+  /* Centra horizontalmente */
+  padding: 20px;
+}
+
+.skill-text {
+  color: var(--color-fondo-claro);
+}
+
+/* Cards de habilidades */
+.skills-grid > div {
+  background-color: var(--color-secundario);
+  padding: 40px 20px;
+  color: var(--color-fondo-claro);
+  text-align: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 0 0 transparent; /* sin sombra por defecto */
+  transition: box-shadow 0.3s ease;
+}
+
+/* Hover con sombra azul */
+.skills-grid > div:hover {
+  box-shadow: 0 0 10px 5px #376787;
+}
+
+/* Grid para películas */
+.peliculas-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* Card contenedor */
+.pelicula-card {
+  perspective: 1000px;
+  width: 200px;
+  height: 300px;
+}
+
+/* Estructura interna */
+.pelicula-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.pelicula-card:hover .pelicula-inner {
+  transform: rotateY(180deg);
+}
+
+/* Frente y dorso */
+.pelicula-front, .pelicula-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Imagen frontal */
+.pelicula-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dorso con texto */
+.pelicula-back {
+  background: #ffffff;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+  padding: 15px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Sección 4 - Música estilo Spotify */
+.spotify-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.spotify-card {
+  background: var(--color-fondo);
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.7s ease;
+}
+
+.spotify-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.spotify-card p {
+  text-align: center;
+  margin: 10px 0 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--color-texto-principal);
+}
+
+/* Hover efecto */
+.spotify-card:hover {
+  box-shadow: 0 0 10px 5px #376787;
+}
+
+.spotify-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.spotify-card:hover .overlay {
+  opacity: 1;
+}
+
+.spotify-card .overlay i {
+  color: white;
+  font-size: 2rem;
+}
+
+/*Footer*/
+footer {
+  background-color: var(--color-encabezado);
+  padding: 5px;
+  text-align: center;
+}
+
+footer p {
+  color: var(--color-fondo);
+  font-size: 0.8rem;
+}
+
+.main-especial{
+  height: 100vh;
+}
+
+/* Responsive Design */
+/*Móviles pequeños (hasta 400px) */
+@media (max-width: 400px) {
+  #navbar{
+    display: flex;
+  }
+  #texto .container{
+    flex-direction: column;
+    padding: 40px;
+}
+.equipo {
+  font-size: 2rem; 
+}
+  .nav-links{
+    background-color: var(--color-encabezado);
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    margin-top: 10px;
+    display: none; /* enlaces ocultos por defecto */ 
+    position: absolute;
+    top: 100%;  /* debajo del navbar */
+    right: 0;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1000;
+  }
+  .nav-links.show {
+    display: flex; /* al activarse, se muestran */
+  }
+  .menu-toggle {
+    display: block; /* se muestra el botón en móvil */
+  }
+  .texto-columna h2{
+    font-size: 0.7m;
+  }
+  .seccion-1-grid{
+    gap: 15px;
+  } h2{
+    font-size: 1em;
+  }p{
+    font-size: 0.7em;
+  }.foto-perfil{
+    max-height: 10em;
+  }
+  .carrusel{
+    max-width: 60%
+  }
+    .music-grid{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .music1 , .music2, .music3 , .music4{
+    max-height: 10em;
+  }
+}
+
+ /* Tablets o pantallas medianas (hasta 900px) */
+@media (max-width: 900px) and (min-width: 401px) {
+}
+
+/*Escritorios grandes (desde 1200px)*/
+@media (min-width: 1200px) {
+}
