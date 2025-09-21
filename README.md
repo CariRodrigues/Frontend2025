@@ -13,13 +13,13 @@
 - Integrante 5  
 
 ## **Grupo 6 (Codebolts Six):**  
-| Nombre        | Página individual |
-|---------------|-----------------|
-| Rodrigues, Carina     | [crc.html](juan.html) |
-| Mendiola, Eduardo E.   | [eduardo.html](maria.html) |
-| Herrera, Neuyin  | [neuyin.html](neuyin.html) |
-| Integrante 4  | [integrante4.html](int4.html) |
-| Integrante 5  | [integrante5.html](int5.html) |
+| Nombre              | Página individual     |
+|---------------------|-----------------------|
+| Rodrigues, Carina   | [crc.html](juan.html) |
+| Mendiola, Eduardo E.| [eduardo.html](maria.html) |
+| Herrera, Neuyin     | [neuyin.html](neuyin.html) |
+| Integrante 4        | [integrante4.html](int4.html) |
+| Integrante 5        | [integrante5.html](int5.html) |
 
 
 **Fecha:** 19-09-2025  
@@ -60,7 +60,7 @@ El proyecto incluye:
 ├── porfolios/
 │   ├── crc.html           # Página individual de Carina Rodrigues
 │   ├── eduardo.jpg        # Página individual de Eduardo Mendiola
-│   ├── neuyin.html          # Página individual del integrante 3
+│   ├── neuyin.html        # Página individual de Neuyin Herrera
 │   ├── int4.html          # Página individual del integrante 4
 │   └── int5.html          # Página individual del integrante 5
 ├── css/
@@ -68,7 +68,7 @@ El proyecto incluye:
 ├── js/
 │   ├── crc.js             # JS individual de Carina Rodrigues
 │   ├── eduardo.js         # JS individual de Eduardo Mendiola
-│   ├── neuyin.js            # JS individual del integrante 3
+│   ├── neuyin.js          # JS individual de Neuyin Herrera
 │   ├── int4.js            # JS individual del integrante 4
 │   ├── int5.js            # JS individual del integrante 5
 │   └── main.js            # Funciones dinámicas generales
@@ -108,7 +108,7 @@ Cada integrante tiene un porfolio con:
 ![Captura Eduardo Mendiola](img/screenshots/eduardo_screenshot.png)
 
 ### Neuyin Herrera
-![Captura Int 3](img/screenshots/int3_screenshot.png)
+![Captura Neuyin Herrera](img/screenshots/neuyin_screenshot.png)
 
 ### Int 3
 ![Captura Int 3](img/screenshots/int3_screenshot.png)
