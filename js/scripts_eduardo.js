@@ -65,6 +65,8 @@ function handleScroll() {
 
   sections.forEach((section, index) => {
     const wrapper = wrappers[index];
+    
+
     if (!wrapper) return;
     const img = wrapper.querySelector('.sea-wolf');
     const reflection = wrapper.querySelector('.sea-wolf-reflection');

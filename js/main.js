@@ -112,3 +112,13 @@ document.addEventListener('DOMContentLoaded', () => {
         popup.setAttribute('aria-hidden', 'true');
     });
 });
+
+/*menu desplegable*/
+const toggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+toggle.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
+
+
