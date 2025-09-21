@@ -1,3 +1,4 @@
+/*carrousel en crc.html*/
 let indice = 0;
 
 function moverCarrusel(direccion) {
@@ -9,3 +10,10 @@ function moverCarrusel(direccion) {
 
     carrusel.style.transform = `translateX(-${indice * 100}%)`;
 }
+/*menu desplegable*/
+const toggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+toggle.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});

@@ -85,34 +85,35 @@ a {
 
 .equipo {
   font-size: 3.5rem;
-  font-family: var(--fuente-titulos);
+  font-family: var(--fuente-titulos);  
 }
 
 /*Header principal*/
-/*
-#mainheader{
-    background-image: url("../img/portada.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 60vh;
-    color: white;
-}
-*/
+
 #mainheader {
   background-color: var(--color-encabezado);
   height: 50vh;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
+.menu-toggle {/*menú hamburguesa oculto*/
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: var(--color-fondo-claro);
+  cursor: pointer;
+}
 
 .navbar {
   display: flex;
-  height: 50px;
+  height: 60px;
   justify-content: space-between;
   align-items: center;
   background-color: var(--color-encabezado);
   padding: 0 1rem;
+  position: relative;
+  z-index: 1000;
 }
 
 a:visited {
@@ -124,9 +125,9 @@ a:hover {
 }
 
 .logo img {
-  max-height: 80px;
+  margin-top: 10px;
+  max-height: 50px;
   max-width: 200px;
-  display: block;
 }
 
 .nav-links {
@@ -139,6 +140,7 @@ a:hover {
 
 .nav-links li {
   margin-left: 1.5rem;
+  position: relative;
 }
 
 .nav-links a {
@@ -146,6 +148,7 @@ a:hover {
   text-decoration: none;
   font-weight: 500;
   padding: 8px;
+  display: block;
 }
 
 .nav-links a:hover {
@@ -371,13 +374,13 @@ a:hover {
 /* Sección 4 - music - 4 columnas*/
 .music-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  /* 4 columnas de igual ancho */
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 25px 5px;
   /* espacio entre columnas y filas */
-  padding: 20px;
   width: 80%;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   margin: 0 auto;
 }
 
@@ -386,13 +389,14 @@ a:hover {
 .music3,
 .music4 {
   background-color: var(--color-fondo);
-  height: 20em;
-  width: 100%;
-  text-align: center;
+  height: 15em;
+  width: 70%;
   border-radius: 8px;
   font-size: 18px;
   overflow: hidden;
   position: relative;
+  padding: 10px 10px 5px 10px;
+  box-shadow: 4px 4px 10px var(--color-encabezado);
 }
 
 .music-grid p {
@@ -406,13 +410,14 @@ a:hover {
   text-align: center;
   z-index: 1;
   margin: 0;
+ 
 }
 
 .music-grid img {
   width: 100%;
   display: block;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   filter: brightness(0.2);
 }
 
@@ -460,4 +465,115 @@ footer {
 footer p {
   color: var(--color-fondo);
   font-size: 0.8rem;
+}
+
+.main-especial{
+  height: 100vh;
+}
+
+/* Responsive Design */
+/*Móviles pequeños (hasta 400px) */
+@media (max-width: 400px) {
+ .equipo {
+  font-size: 2rem; 
+}
+ #texto .container{
+    flex-direction: column;
+    padding: 40px;
+ }
+ #navbar{
+    display: flex;
+  }
+  .nav-links{
+    background-color: var(--color-encabezado);
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    margin-top: 10px;
+    display: none; /* enlaces ocultos por defecto */ 
+    position: absolute;
+    top: 100%;  /* debajo del navbar */
+    right: 0;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1000;
+  }
+  .nav-links.show {
+    display: flex; /* al activarse, se muestran */
+  }
+  .menu-toggle {
+    display: block; /* se muestra el botón en móvil */
+  }
+  
+  .seccion-1-grid{
+    gap: 15px;
+  } h2{
+    font-size: 1em;
+  }p{
+    font-size: 0.7em;
+  }.foto-perfil{
+    max-height: 10em;
+  }
+  .carrusel{
+    max-width: 60%
+  }
+    .music-grid{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .music1 , .music2, .music3 , .music4{
+    max-height: 10em;
+  }
+
+ }
+
+ /* Tablets o pantallas medianas (hasta 900px) */
+@media (max-width: 900px) and (min-width: 401px) {
+   #navbar{
+    display: flex;
+  }
+  .nav-links{
+    background-color: var(--color-encabezado);
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    margin-top: 10px;
+    display: none; /* enlaces ocultos por defecto */ 
+    position: absolute;
+    top: 100%;  /* debajo del navbar */
+    right: 0;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1000;
+  }
+  .nav-links.show {
+    display: flex; /* al activarse, se muestran */
+  }
+  .menu-toggle {
+    display: block; /* se muestra el botón en móvil */
+  }
+  
+  .seccion-1-grid{
+    gap: 30x;
+  } h2{
+    font-size: 1em;
+  }p{
+    font-size: 0.7em;
+  }.foto-perfil{
+    max-height: 10em;
+  }
+  .carrusel{
+    max-width: 60%
+  }
+  .skills-grid {
+  grid-template-columns: 1fr 1fr; /* dos columnas iguales */
+  grid-template-rows: auto auto;  /* dos filas */
+}
+.skills-grid> :last-child{
+  grid-column: 1 / span 2; /* 👈 ocupa las dos columnas */
+}
+}
+
+/* 🔹 Escritorios grandes (desde 1200px) */
+@media (min-width: 1200px) {
+  
 }
