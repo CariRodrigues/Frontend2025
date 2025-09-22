@@ -229,6 +229,7 @@ header {
 
 .footer {
     grid-area: footer;
+    width: 100vw;
 }
 
 header,
