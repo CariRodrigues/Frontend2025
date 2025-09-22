@@ -45,64 +45,48 @@ document.addEventListener('DOMContentLoaded', () => {
             popup.style.display = 'block';
             popup.setAttribute('aria-hidden', 'false');
 
-            // Posicionar popup (a la derecha del enlace; si no entra, lo coloca a la izquierda)
-            const rect = a.getBoundingClientRect();
-            const scrollX = window.pageXOffset || document.documentElement.scrollLeft;
-            const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+            // Usar setTimeout para permitir que el popup se renderice y obtenga sus dimensiones reales
+            setTimeout(() => {
+                const rect = a.getBoundingClientRect();
+                const scrollX = window.pageXOffset || document.documentElement.scrollLeft;
+                const scrollY = window.pageYOffset || document.documentElement.scrollTop;
 
-            // valores del ancho del popup 
-            const popupApproxWidth = 260;
-            let left = rect.right + 10 + scrollX;
-            if (left + popupApproxWidth > window.innerWidth + scrollX) {
-                left = rect.left - popupApproxWidth - 10 + scrollX;
-            }
-            let top = rect.top + scrollY;
+                // Obtener dimensiones reales del popup o usar valores por defecto
+                const popupApproxWidth = popup.offsetWidth || 260;
+                const popupApproxHeight = popup.offsetHeight || 300;
 
-            // evitar que quede fuera abajo
-            if (top + 300 > window.innerHeight + scrollY) {
-                top = window.innerHeight + scrollY - 320;
-            }
+                // Intentar a la izquierda primero (ya que los enlaces están a la derecha)
+                let left = rect.left - popupApproxWidth - 15 + scrollX;
+                
+                // Si no cabe a la izquierda, colocar a la derecha
+                if (left < scrollX) {
+                    left = rect.right + 15 + scrollX;
+                }
 
-            popup.style.left = left + 'px';
-            popup.style.top = top + 'px';
+                // Si tampoco cabe a la derecha, ajustar dentro de la pantalla
+                if (left + popupApproxWidth > window.innerWidth + scrollX) {
+                    left = window.innerWidth + scrollX - popupApproxWidth - 10;
+                }
+
+                // Centrar verticalmente respecto al enlace
+                let top = rect.top + scrollY + (rect.height / 2) - (popupApproxHeight / 2);
+
+                // Evitar que se corte por arriba o abajo
+                if (top < scrollY + 10) {
+                    top = scrollY + 10;
+                } else if (top + popupApproxHeight > scrollY + window.innerHeight - 10) {
+                    top = scrollY + window.innerHeight - popupApproxHeight - 10;
+                }
+
+                popup.style.left = left + 'px';
+                popup.style.top = top + 'px';
+            }, 10);
         });
 
-        // ocultar al salir
-        a.addEventListener('mouseenter', (e) => {
-            const imgSrc = a.dataset.img;
-            if (!imgSrc) return;
-
-            // Actualiza popup
-            popupImg.src = imgSrc;
-            popupName.textContent = a.textContent.trim();
-            popup.style.display = 'block';
-
-            const rect = a.getBoundingClientRect();
-            const scrollX = window.pageXOffset || document.documentElement.scrollLeft;
-            const scrollY = window.pageYOffset || document.documentElement.scrollTop;
-
-            const popupApproxWidth = popup.offsetWidth || 260;
-            const popupApproxHeight = popup.offsetHeight || 300;
-
-            // Siempre intento a la izquierda
-            let left = rect.left - popupApproxWidth - 10 + scrollX;
-            if (left < 0) {
-                // Si no hay espacio a la izquierda, lo pongo a la derecha
-                left = rect.right + 10 + scrollX;
-            }
-
-            // Alinear al centro vertical del link
-            let top = rect.top + scrollY + (rect.height / 2) - (popupApproxHeight / 2);
-
-            // Evitar que se corte por arriba o abajo
-            if (top < scrollY + 10) {
-                top = scrollY + 10; // margen arriba
-            } else if (top + popupApproxHeight > scrollY + window.innerHeight) {
-                top = scrollY + window.innerHeight - popupApproxHeight - 10; // margen abajo
-            }
-
-            popup.style.left = left + 'px';
-            popup.style.top = top + 'px';
+        // Ocultar al salir del enlace
+        a.addEventListener('mouseleave', () => {
+            popup.style.display = 'none';
+            popup.setAttribute('aria-hidden', 'true');
         });
     });
 
