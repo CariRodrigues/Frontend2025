@@ -47,6 +47,16 @@
 /* || GENERAL */
 
 body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header header"
+    "section1 section1 section1 section1"
+    "section2 section2 section2 section2"
+    "section3 section3 section3 section3"
+    "footer footer footer footer";
+
     font-family: var(--font-primary);
     margin: 0;
     padding: 0;
@@ -105,6 +115,7 @@ header {
     /* overflow-x: hidden; */
     background-position: top center;
     position: relative;
+    grid-area: header;
 }
 
 .header-information {
@@ -193,23 +204,32 @@ header {
 }
 
 .main-top-container {
+    grid-area: section1;
     padding-top: 100vh;
     box-sizing: border-box;
     background: url("../img/eduardo/eduardo_background_01.webp") no-repeat center/cover;
     background-position: top center;
     height: 100vh;
+    width: 100vw;
 }
 
 .main-middle-container {
+    grid-area: section2;
     background: url("../img/eduardo/eduardo_background_02.webp") no-repeat center/cover;
     background-position: top center;
     height: 100vh;
 }
 
 .main-bottom-container {
+    grid-area: section3;
     background: url("../img/eduardo/eduardo_background_03.webp") no-repeat center/cover;
     background-position: top center;
     height: 100vh;
+}
+
+.footer {
+    grid-area: footer;
+    width: 100vw;
 }
 
 header,
@@ -250,8 +270,8 @@ header,
     color: var(--color-primary-text);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
-    padding: 1rem;
-    width: 28vw;
+    padding: 0.8rem;
+    width: 20vw;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -393,7 +413,7 @@ header,
 .star {
     position: fixed;
     top: -100px;
-    /* width: 60px;              */
+    /* width: 60px;*/
     pointer-events: none;
     opacity: 0.8;
     z-index: 9999;
@@ -426,6 +446,10 @@ header,
         gap: 17rem;
         height: auto;
         /* que se ajuste al contenido */
+    }
+
+    h2 {
+        font-size: 2rem;
     }
 
     .header-left,
@@ -466,6 +490,12 @@ header,
         font-size: 1.8rem;
         color: var(--color-white);
     }
+
+    
+    .card {
+        padding: 0.5rem;
+        width: 25vw;
+    }
 }
 
 @media screen and (min-width: 401px) and (max-width: 600px) {
@@ -476,6 +506,10 @@ header,
         text-align: center;
         gap: 10rem;
         height: auto;
+    }
+
+    h2 {
+        font-size: 2rem;
     }
 
     .header-left,
@@ -515,10 +549,19 @@ header,
         font-size: 1.9rem;
         color: var(--color-white);
     }
+
+    .section-title h2 {
+        font-size: 3rem;
+    }
+
+    .card {
+        width: 25vw;
+        padding: 0.5rem;
+    }
 }
 
 
-@media screen and (min-width: 601px) and (max-width: 800px) {
+@media screen and (min-width: 601px) and (max-width: 900px) {
     .header-information {
         flex-direction: row;
         justify-content: center;
@@ -532,6 +575,10 @@ header,
     .age_number {
         align-self: auto;
         margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 2rem;
     }
 
     .name_edu {
@@ -562,8 +609,9 @@ header,
         color: var(--color-white);
     }
 
-    .section-title {
-        font-size: 2rem;
+     .card {
+        width: 25vw;
+        padding: 0.5rem;
     }
 }
 
