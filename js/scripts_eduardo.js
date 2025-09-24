@@ -25,7 +25,7 @@ cards.forEach(card => {
 const wrappers = document.querySelectorAll('.sea-wolf-wrap');
 const sections = document.querySelectorAll('section');
 
-const speedFactor = 0.8;   // ajustar
+const speedFactor = 0.75;   // ajustar
 const startScroll = 0.8; // empezar movimiento a 60%
 
 let lastScrollY = window.scrollY;
@@ -105,11 +105,11 @@ function handleScroll() {
     
     // si tenés 2 imágenes para forward/backward, actualizalas a las dos
     if ((scrollingDown && direction === 1) || (!scrollingDown && direction === -1)) {
-      img.src = 'img/eduardo/lobo_mar.png';
-      reflection.src = 'img/eduardo/lobo_mar_sombra.png';
+      img.src = 'img/eduardo/lobo_mar.webp';
+      reflection.src = 'img/eduardo/lobo_mar_sombra.webp';
     } else {
-      img.src = 'img/eduardo/lobo_mar2.png';
-      reflection.src = 'img/eduardo/lobo_mar2_sombra.png';
+      img.src = 'img/eduardo/lobo_mar2.webp';
+      reflection.src = 'img/eduardo/lobo_mar2_sombra.webp';
     }
   });
 }
@@ -134,7 +134,7 @@ let starsActive = false;
 
 function createStar() {
   const star = document.createElement("img");
-  star.src = "img/eduardo/estrella.png"; 
+  star.src = "img/eduardo/estrella.webp"; 
   star.classList.add("star");
 
   // tamaño random entre 40px y 100px
