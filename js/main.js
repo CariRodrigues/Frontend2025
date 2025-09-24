@@ -1,3 +1,12 @@
+/*menu desplegable*/
+const toggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+toggle.addEventListener('click', () => {
+  navLinks.classList.toggle('show');
+});
+
+
 //Modo oscuro / modo claro en index
 const botonModo = document.getElementById('modoOscuroBtn');
 const iconoModo = botonModo.querySelector('.icono-modo');
@@ -99,12 +108,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-/*menu desplegable*/
-const toggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-toggle.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
-});
 
 
