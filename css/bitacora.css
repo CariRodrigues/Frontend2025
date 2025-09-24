@@ -57,8 +57,9 @@ ul, ol {
 li {
     margin-bottom: 0.5rem;
 }
-
-
+.nav-links li a{
+    text-decoration: none;
+}
 section {
     margin-bottom: 2rem;
 }

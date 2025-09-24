@@ -538,6 +538,10 @@ footer p {
    #navbar{
     display: flex;
   }
+  #texto .container{
+    flex-direction: column;
+    padding: 40px;
+ }
   .nav-links{
     background-color: var(--color-encabezado);
     flex-direction: column;
@@ -550,6 +554,9 @@ footer p {
     right: 0;
     padding: 10px;
     border-radius: 10px;
+    z-index: 1000;
+  }
+  .nav-links .dropdown-menu{
     z-index: 1000;
   }
   .nav-links.show {
