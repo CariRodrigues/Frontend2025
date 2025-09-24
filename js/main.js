@@ -1,3 +1,4 @@
+//Modo oscuro / modo claro en index
 const botonModo = document.getElementById('modoOscuroBtn');
 const iconoModo = botonModo.querySelector('.icono-modo');
 
@@ -7,6 +8,7 @@ botonModo.addEventListener('click', () => {
     if (document.body.classList.contains('modo-oscuro')) {
         iconoModo.classList.remove('fa-moon');
         iconoModo.classList.add('fa-sun');
+
     } else {
         iconoModo.classList.remove('fa-sun');
         iconoModo.classList.add('fa-moon');

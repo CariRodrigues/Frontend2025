@@ -37,6 +37,14 @@ body.modo-oscuro {
   --color-texto-principal: #f1f1f1;
   --color-encabezado: #f1f1f1;
   --color-fondo-claro: #2a2a2a;
+  --color-secundario: #f1f1f1;
+  --color-hover: #3C6E71;
+}
+body.modo-oscuro .logo {
+  filter: invert(1) hue-rotate(180deg);
+}
+body.modo-oscuro .nav-links a:hover{
+  color: var(--color-hover);
 }
 
 #modoOscuroBtn {
@@ -128,6 +136,7 @@ a:hover {
   margin-top: 10px;
   max-height: 50px;
   max-width: 200px;
+  transition: filter 0.25s;
 }
 
 .nav-links {
@@ -326,7 +335,7 @@ a:hover {
   margin: 50px auto;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px var(--color-encabezado);
 }
 
 .carrusel-imagenes {
@@ -355,9 +364,9 @@ a:hover {
 }
 
 .carrusel-botones button {
-  background-color: var(--color-encabezado);
+  background-color: var(--color-secundario);
   border: none;
-  color: white;
+  color: var(--color-fondo-claro);
   padding: 10px 16px;
   cursor: pointer;
   font-size: 24px;
@@ -402,7 +411,7 @@ a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: var(--color-fondo);
+  color: var(--color-secundario);
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
