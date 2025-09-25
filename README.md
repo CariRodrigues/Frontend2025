@@ -51,15 +51,20 @@ El proyecto incluye:
 / (directorio raíz)
 ├── index.html             # Portada del proyecto
 ├── bitacora.html          # Sección de bitácora
-├── crc.html               # Página individual de 
-├── porfolios/
-│   ├── crc.html           # Página individual de Carina Rodrigues
-│   ├── eduardo.jpg        # Página individual de Eduardo Mendiola
-│   ├── neuyin.html        # Página individual de Neuyin Herrera
-│   ├── int4.html          # Página individual del integrante 4
-│   └── int5.html          # Página individual del integrante 5
+├── crc.html               # Página individual de Carina Rodrigues
+├── eduardo.jpg            # Página individual de Eduardo Mendiola
+├── neuyin.html            # Página individual de Neuyin Herrera
+├── int4.html              # Página individual del integrante 4
+├── int5.html              # Página individual del integrante 5
 ├── css/
-│   └── styles.css         # Hoja de estilos principal
+│   ├── styles.css         # Hoja de estilos principal
+|   ├── _reset_edu.css     # Reset css
+│   ├── bitacora.css       
+│   ├── style_carina.css    
+│   ├── style_eduardo.css       
+│   ├── style_neuyin.css      
+│   ├── style_int4.css 
+│   └── style_int5.css   
 ├── js/
 │   ├── crc.js             # JS individual de Carina Rodrigues
 │   ├── eduardo.js         # JS individual de Eduardo Mendiola
@@ -67,18 +72,18 @@ El proyecto incluye:
 │   ├── int4.js            # JS individual del integrante 4
 │   ├── int5.js            # JS individual del integrante 5
 │   └── main.js            # Funciones dinámicas generales
-├── img/
-|   ├── screenshots
-|   |       ├── carina_screenshot.png     
-│   |       ├── eduardo_screenshot.png   
-│   |       ├── neuyin_screenshot.png       
-│   |       ├── int4_screenshot.png       
-│   |       └── int5_screenshot.png       
-│   ├── car.jpg
-│   ├── eduardo.jpg
-|   ├── neuyin.png
-│   ├── logo.jpg
-│   └── portada.png
+├── img/  
+│   ├── car
+│   ├── eduardo
+|   ├── neuyin
+│   ├── logo
+│   └── portada
+├── assests               # Documentos para el readme
+|     ├── capturas-carina    
+│     ├── capturas-eduardo   
+│     ├── capturas-neuyin       
+│     ├── capturas-int4       
+│     └── capturas-int5     
 └── README.md               # Este archivo
 
 ```
