@@ -453,7 +453,7 @@ header,
         justify-content: center;
         align-items: center;
         text-align: center;
-        gap: 17rem;
+        gap: 23rem;
         height: auto;
         /* que se ajuste al contenido */
     }
@@ -494,6 +494,7 @@ header,
         font-size: 3rem;
         color: var(--color-white);
         margin-top: 0.5rem;
+        text-align: end;
     }
 
     .age_years {
