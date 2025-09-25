@@ -69,7 +69,6 @@ function handleScroll() {
 
     if (!wrapper) return;
     const img = wrapper.querySelector('.sea-wolf');
-    const reflection = wrapper.querySelector('.sea-wolf-reflection');
 
     const sectionTop = section.offsetTop;
     const sectionHeight = section.offsetHeight;
@@ -105,11 +104,10 @@ function handleScroll() {
     
     // si tenés 2 imágenes para forward/backward, actualizalas a las dos
     if ((scrollingDown && direction === 1) || (!scrollingDown && direction === -1)) {
-      img.src = 'img/eduardo/lobo_mar.webp';
-      reflection.src = 'img/eduardo/lobo_mar_sombra.webp';
+      img.src = '../img/eduardo/lobo_mar.webp';
     } else {
-      img.src = 'img/eduardo/lobo_mar2.webp';
-      reflection.src = 'img/eduardo/lobo_mar2_sombra.webp';
+      img.src = '../img/eduardo/lobo_mar2.webp';
+   
     }
   });
 }
@@ -184,11 +182,3 @@ window.addEventListener("scroll", () => {
   }
 });
 
-
-// /*menu desplegable*/
-// const toggle = document.querySelector('.menu-toggle');
-// const navLinks = document.querySelector('.nav-links');
-
-// toggle.addEventListener('click', () => {
-//   navLinks.classList.toggle('show');
-// });
