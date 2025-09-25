@@ -6,11 +6,6 @@ toggle.addEventListener('click', () => {
   navLinks.classList.toggle('show');
 });
 
-//Evento click al logo --> redirige al index.html
-document.getElementById("logo").addEventListener("click", function(){
-    location.href = "index.html";
-});
-
 //Modo oscuro / modo claro en index
 const botonModo = document.getElementById('modoOscuroBtn');
 const iconoModo = botonModo.querySelector('.icono-modo');
@@ -30,7 +25,6 @@ botonModo.addEventListener('click', () => {
     window.isDarkMode = document.body.classList.contains('modo-oscuro');
     console.log('Dark mode actual:', window.isDarkMode);
 });
-
 
 //JS para abrir/cerrar menú al clickear
 document.querySelectorAll(".dropbtn").forEach(btn => {
