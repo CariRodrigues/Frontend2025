@@ -16,6 +16,7 @@
     --color-white: #FFFFFF;
     --color-white-yellow: #ebe592;
     --color-white-yellow-2: #99942f;
+    --backgraund-color-black: #1e1e1e;
 
     /* || VARIABLE DE FONTS */
     --font-primary: 'Open Sans', sans-serif;
@@ -127,7 +128,7 @@ header {
 }
 
 .header-left {
-    margin: 3rem 0.8rem;
+    margin: 8rem 0.8rem;
     padding: 1.5rem 1rem;
     align-self: flex-end;
 }
@@ -171,14 +172,15 @@ header {
 }
 
 .sun_icon {
+    background: url("../img/eduardo/sun.webp") no-repeat center top;
+    background-size: contain; 
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transform-origin: center;
     width: 12rem;
-    height: auto;
-    animation: spin 10s linear infinite;
+    height: 12rem; 
+    animation: spin 10s linear infinite; 
 }
 
 
@@ -197,7 +199,7 @@ header {
     font-family: var(--font-primary);
     font-size: 8rem;
     font-weight: bold;
-    margin: 5rem 0 5rem 0;
+    margin: 6rem 4rem 10rem 0;
     color: var(--color-white-yellow);
 }
 
@@ -507,10 +509,12 @@ header,
 }
 
 @media screen and (min-width: 401px) and (max-width: 600px) {
+
     .navbar,
     .dropdown-menu {
         background-color: var(--color-background-navbar-solid);
     }
+
     .header-information {
         flex-direction: column;
         justify-content: center;
@@ -574,11 +578,12 @@ header,
 
 
 @media screen and (min-width: 601px) and (max-width: 900px) {
+
     .navbar,
     .dropdown-menu {
         background-color: var(--color-background-navbar-solid);
     }
-    
+
     .header-information {
         flex-direction: row;
         justify-content: center;
@@ -664,3 +669,70 @@ header,
         font-size: 4rem;
     }
 } */
+
+/* Modo oscuro */
+
+
+#modoOscuroBtn {
+    margin: 10px 30px;
+    border: none;
+    width: 60px;
+    height: 40px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 10px;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Cambiar imágenes en modo oscuro */
+body.modo-oscuro header {
+    background: url("../img/eduardo/eduardo_header_dark.webp") no-repeat center top;
+    background-size: cover;
+}
+
+body.modo-oscuro .main-top-container {
+    background: url("../img/eduardo/eduardo_background_01_dark.webp") no-repeat center/cover;
+}
+
+body.modo-oscuro .main-middle-container {
+    background: url("../img/eduardo/eduardo_background_02_dark.webp") no-repeat center/cover;
+}
+
+body.modo-oscuro .main-bottom-container {
+    background: url("../img/eduardo/eduardo_background_03_dark.webp") no-repeat center/cover;
+}
+
+
+body.modo-oscuro .sun_icon {
+    background: url("../img/eduardo/moon.webp") no-repeat center top;
+    background-size: contain;
+}
+
+body.modo-oscuro .card {
+    background-color: var(--backgraund-color-black);
+}
+
+body.modo-oscuro .footer {
+    background-color: var(--color-background-navbar-solid);
+}
+
+body.modo-oscuro .footer p{
+    color: var(--color-white);
+}
+
+
+body.modo-oscuro .logo {
+  filter: none;
+}
+
+body.modo-oscuro .nav-links a{
+  color: var(--color-white);
+}
+
+body.modo-oscuro .nav-links a:hover{
+  color: var(--color-white-yellow);
+}

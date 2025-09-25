@@ -24,6 +24,7 @@ botonModo.addEventListener('click', () => {
     }
 });
 
+
 //JS para abrir/cerrar menú al clickear
 document.querySelectorAll(".dropbtn").forEach(btn => {
     btn.addEventListener("click", e => {
