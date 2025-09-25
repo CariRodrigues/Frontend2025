@@ -17,10 +17,12 @@ botonModo.addEventListener('click', () => {
     if (document.body.classList.contains('modo-oscuro')) {
         iconoModo.classList.remove('fa-moon');
         iconoModo.classList.add('fa-sun');
+        botonModo.style.justifyContent = 'start';
 
     } else {
         iconoModo.classList.remove('fa-sun');
         iconoModo.classList.add('fa-moon');
+        botonModo.style.justifyContent = 'end';
     }
      // Guardamos el estado en window para que otros scripts puedan usarlo
     window.isDarkMode = document.body.classList.contains('modo-oscuro');

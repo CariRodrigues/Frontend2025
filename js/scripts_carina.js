@@ -28,9 +28,11 @@ botonModo.addEventListener('click', () => {
     if (document.body.classList.contains('modo-oscuro')) {
         iconoModo.classList.remove('fa-moon');
         iconoModo.classList.add('fa-sun');
+        botonModo.style.justifyContent = 'start';
 
     } else {
         iconoModo.classList.remove('fa-sun');
         iconoModo.classList.add('fa-moon');
+        botonModo.style.justifyContent = 'end';
     }
 });
