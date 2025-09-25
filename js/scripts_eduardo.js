@@ -19,10 +19,21 @@ cards.forEach(card => {
   });
 });
 
-const isDarkMode = document.querySelector('body').classList.contains('dark-mode');
 
 
 // Lobo de mar
+// const botonModoOscuro = document.getElementById('modoOscuroBtn');
+
+// botonModoOscuro.addEventListener('click', () => {
+//     // Alternamos la clase modo-oscuro en el body
+//     document.body.classList.toggle('modo-oscuro');
+
+//     // Guardamos el estado actual en la variable
+//     const isDarkMode = document.body.classList.contains('modo-oscuro');
+
+//     console.log('Dark mode activado:', isDarkMode);
+// });
+
 const wrappers = document.querySelectorAll('.sea-wolf-wrap');
 const sections = document.querySelectorAll('section');
 
@@ -102,13 +113,12 @@ function handleScroll() {
         easing: "ease-in-out"
       }
     );
-    
+     
     // si tenés 2 imágenes para forward/backward, actualizalas a las dos
     if ((scrollingDown && direction === 1) || (!scrollingDown && direction === -1)) {
-      img.src = '../img/eduardo/lobo_mar.webp';
+      img.src = window.isDarkMode ? '../img/eduardo/lobo_mar_dark.webp' : '../img/eduardo/lobo_mar.webp';
     } else {
-      img.src = '../img/eduardo/lobo_mar2.webp';
-   
+      img.src = window.isDarkMode ? '../img/eduardo/lobo_mar2_dark.webp' : '../img/eduardo/lobo_mar2.webp';
     }
   });
 }

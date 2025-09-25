@@ -22,6 +22,9 @@ botonModo.addEventListener('click', () => {
         iconoModo.classList.remove('fa-sun');
         iconoModo.classList.add('fa-moon');
     }
+     // Guardamos el estado en window para que otros scripts puedan usarlo
+    window.isDarkMode = document.body.classList.contains('modo-oscuro');
+    console.log('Dark mode actual:', window.isDarkMode);
 });
 
 

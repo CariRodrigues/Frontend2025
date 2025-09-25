@@ -173,14 +173,14 @@ header {
 
 .sun_icon {
     background: url("../img/eduardo/sun.webp") no-repeat center;
-    background-size: contain; 
+    background-size: contain;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 12rem;
-    height: 12rem; 
-    animation: spin 10s linear infinite; 
+    height: 12rem;
+    animation: spin 10s linear infinite;
 }
 
 
@@ -398,11 +398,14 @@ header,
 }
 
 .wolf-pack {
+    background: url("../img/eduardo/grupo_lobos.webp") no-repeat center;
+    background-size: contain;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     width: calc(var(--width-wolf) * 1.5);
+    height: calc(var(--width-wolf) * 1.5);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -507,6 +510,10 @@ header,
         padding: 0.5rem;
         width: 25vw;
     }
+
+    body.modo-oscuro .nav-links {
+        background-color: var(--color-background-navbar-solid);
+    }
 }
 
 @media screen and (min-width: 401px) and (max-width: 600px) {
@@ -576,6 +583,10 @@ header,
         width: 25vw;
         padding: 0.5rem;
     }
+
+    body.modo-oscuro .nav-links {
+        background-color: var(--color-background-navbar-solid);
+    }
 }
 
 
@@ -636,6 +647,10 @@ header,
     .card {
         width: 25vw;
         padding: 0.5rem;
+    }
+
+    body.modo-oscuro .nav-links {
+        background-color: var(--color-background-navbar-solid);
     }
 }
 
@@ -722,27 +737,28 @@ body.modo-oscuro .footer {
     background-color: var(--color-background-navbar-solid);
 }
 
-body.modo-oscuro .footer p{
+body.modo-oscuro .footer p {
     color: var(--color-white);
 }
 
 
 body.modo-oscuro .logo {
-  filter: none;
+    filter: none;
 }
 
-body.modo-oscuro .nav-links a{
-  color: var(--color-white);
+body.modo-oscuro .nav-links a {
+    color: var(--color-white);
 }
 
-body.modo-oscuro .nav-links a:hover{
-  color: var(--color-white-yellow);
+body.modo-oscuro .nav-links a:hover {
+    color: var(--color-white-yellow);
 }
 
-body.modo-oscuro .menu-toggle{
-  color: var(--color-white);
+body.modo-oscuro .menu-toggle {
+    color: var(--color-white);
 }
 
-body.modo-oscuro .nav-links{
-  background-color: var(--color-background-navbar-solid);
+body.modo-oscuro .wolf-pack {
+    background: url("../img/eduardo/grupo_lobos_dark.webp") no-repeat center;
+    background-size: contain;
 }

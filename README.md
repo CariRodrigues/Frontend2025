@@ -100,11 +100,11 @@ Cada integrante tiene un porfolio con:
 
 ---
 
-### Carina Rodrigues
+### **Carina Rodrigues**
 ![Captura Carina Rodrigues](img/screenshots/carina_screenshot.png)
 
 ---
-### Eduardo Mendiola
+### **Eduardo Mendiola**
 ### Header
 
 #### Efecto spin
@@ -175,19 +175,28 @@ Mientras el footer permanece en pantalla, se crean lotes de estrellas cada segun
 
 ![Peliculas favoritas Eduardo Mendiola](assets/capturas-eduardo/edu-musica-02.webp)
 
+### Modo oscuro
+
+Se implementó un modo oscuro que permite alternar entre tema claro y oscuro, cambiando los colores principales de la interfaz y reemplazando imágenes generales para mantener la coherencia visual según el tema seleccionado.
+
+![Modo oscuro Eduardo Mendiola](assets/capturas-eduardo/edu-modo-oscuro-01.webp)
+
+
+![Modo oscuro Eduardo Mendiola](assets/capturas-eduardo/edu-modo-oscuro-02.webp)
+
 ---
 
-### Neuyin Herrera
+### **Neuyin Herrera**
 ![Captura Neuyin Herrera](img/screenshots/neuyin_screenshot.png)
 
 ---
 
-### Int 3
+### **Int 3**
 ![Captura Int 3](img/screenshots/int3_screenshot.png)
 
 ---
 
-### Int 3
+### **Int 3**
 ![Captura Int 3](img/screenshots/int3_screenshot.png)
 
 ---
