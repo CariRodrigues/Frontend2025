@@ -6,6 +6,10 @@ toggle.addEventListener('click', () => {
   navLinks.classList.toggle('show');
 });
 
+//Evento click al logo --> redirige al index.html
+document.getElementById("logo").addEventListener("click", function(){
+    location.href = "index.html";
+});
 
 //Modo oscuro / modo claro en index
 const botonModo = document.getElementById('modoOscuroBtn');
