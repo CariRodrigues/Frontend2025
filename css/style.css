@@ -380,29 +380,19 @@ a:hover {
 
 /* Sección 4 - music - 4 columnas*/
 .music-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-  gap: 25px 5px;
-  /* espacio entre columnas y filas */
-  width: 80%;
+  display: flex;
+  gap: 40px;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
-.music1,
-.music2,
-.music3,
-.music4 {
+.music-item {
   background-color: var(--color-fondo);
   height: 15em;
-  width: 70%;
+  width: 15%;
   border-radius: 8px;
-  font-size: 18px;
-  overflow: hidden;
   position: relative;
-  padding: 10px 10px 5px 10px;
+  padding: 20px 10px 10px 10px;
   box-shadow: 4px 4px 10px var(--color-encabezado);
 }
 
@@ -412,7 +402,7 @@ a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--color-secundario);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
   z-index: 1;
@@ -424,7 +414,7 @@ a:hover {
   width: 100%;
   display: block;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   filter: brightness(0.2);
 }
 
@@ -524,11 +514,20 @@ footer p {
   .carrusel{
     max-width: 60%
   }
+  .carrusel-botones {
+  width: 70%;
+}
     .music-grid{
-    grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+      align-items: center; 
   }
-  .music1 , .music2, .music3 , .music4{
-    max-height: 10em;
+  .music-item{
+     width: 60%;   /* ocupa todo el ancho */
+     height: 12em;
+  }
+
+  .music-item p{
+    font-size: 1.2rem;
   }
 
  }
@@ -585,6 +584,17 @@ footer p {
 .skills-grid> :last-child{
   grid-column: 1 / span 2; /* 👈 ocupa las dos columnas */
 }
+.music-grid{
+      gap: 20px;
+      align-items: center; 
+  }
+  .music-item{
+     width: 35%;   /* ocupa todo el ancho */
+     height: 15em;
+  }
+.music-item p{
+    font-size: 1rem;
+  }
 }
 
 /* 🔹 Escritorios grandes (desde 1200px) */
