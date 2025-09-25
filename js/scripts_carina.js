@@ -34,7 +34,3 @@ botonModo.addEventListener('click', () => {
         iconoModo.classList.add('fa-moon');
     }
 });
-//Evento click al logo --> redirige al index.html
-document.getElementById("logo").addEventListener("click", function(){
-    location.href = "index.html";
-});
