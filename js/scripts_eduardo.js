@@ -19,6 +19,7 @@ cards.forEach(card => {
   });
 });
 
+const isDarkMode = document.querySelector('body').classList.contains('dark-mode');
 
 
 // Lobo de mar

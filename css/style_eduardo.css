@@ -172,7 +172,7 @@ header {
 }
 
 .sun_icon {
-    background: url("../img/eduardo/sun.webp") no-repeat center top;
+    background: url("../img/eduardo/sun.webp") no-repeat center;
     background-size: contain; 
     position: absolute;
     top: 50%;
@@ -550,7 +550,7 @@ header,
     }
 
     .sun_icon {
-        width: 6rem;
+        width: 8rem;
         top: 45%;
         left: 50%;
     }
@@ -708,7 +708,7 @@ body.modo-oscuro .main-bottom-container {
 
 
 body.modo-oscuro .sun_icon {
-    background: url("../img/eduardo/moon.webp") no-repeat center top;
+    background: url("../img/eduardo/moon.webp") no-repeat center;
     background-size: contain;
 }
 
