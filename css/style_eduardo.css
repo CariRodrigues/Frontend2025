@@ -9,6 +9,7 @@
     --color-background-body: #C4CFCC;
     --color-background-section: white;
     --color-background-navbar: rgba(40, 75, 99, 0.5);
+    --color-background-navbar-solid: rgb(40, 75, 99);
     --color-heading: #2c3e50;
     --color-accent: #3498db;
     --color-light-gray: #ccc;
@@ -50,12 +51,12 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    grid-template-areas: 
-    "header header header header"
-    "section1 section1 section1 section1"
-    "section2 section2 section2 section2"
-    "section3 section3 section3 section3"
-    "footer footer footer footer";
+    grid-template-areas:
+        "header header header header"
+        "section1 section1 section1 section1"
+        "section2 section2 section2 section2"
+        "section3 section3 section3 section3"
+        "footer footer footer footer";
 
     font-family: var(--font-primary);
     margin: 0;
@@ -439,6 +440,12 @@ header,
 
 /* Móviles pequeños */
 @media screen and (max-width: 400px) {
+
+    .navbar,
+    .dropdown-menu {
+        background-color: var(--color-background-navbar-solid);
+    }
+
     .header-information {
         flex-direction: column;
         justify-content: center;
@@ -492,7 +499,7 @@ header,
         color: var(--color-white);
     }
 
-    
+
     .card {
         padding: 0.5rem;
         width: 25vw;
@@ -500,6 +507,10 @@ header,
 }
 
 @media screen and (min-width: 401px) and (max-width: 600px) {
+    .navbar,
+    .dropdown-menu {
+        background-color: var(--color-background-navbar-solid);
+    }
     .header-information {
         flex-direction: column;
         justify-content: center;
@@ -563,6 +574,11 @@ header,
 
 
 @media screen and (min-width: 601px) and (max-width: 900px) {
+    .navbar,
+    .dropdown-menu {
+        background-color: var(--color-background-navbar-solid);
+    }
+    
     .header-information {
         flex-direction: row;
         justify-content: center;
@@ -610,7 +626,7 @@ header,
         color: var(--color-white);
     }
 
-     .card {
+    .card {
         width: 25vw;
         padding: 0.5rem;
     }
@@ -648,6 +664,3 @@ header,
         font-size: 4rem;
     }
 } */
-
-
-
