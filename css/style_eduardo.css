@@ -444,6 +444,8 @@ header,
 /* || MEDIA QUERIES */
 
 /* Móviles pequeños */
+
+
 @media screen and (max-width: 400px) {
 
     .navbar,
@@ -456,11 +458,12 @@ header,
         justify-content: center;
         align-items: center;
         text-align: center;
-        gap: 23rem;
+        gap: 30rem;
         height: auto;
         /* que se ajuste al contenido */
     }
 
+ 
     h2 {
         font-size: 2rem;
     }
@@ -468,7 +471,7 @@ header,
     .header-left,
     .header-right {
         margin: -2rem 0;
-        padding: 0.5rem;
+        padding-top: 0.5rem;
         align-self: center;
     }
 
@@ -496,8 +499,9 @@ header,
     .age_number {
         font-size: 3rem;
         color: var(--color-white);
-        margin-top: 0.5rem;
-        text-align: end;
+        margin-top: -2rem;
+        margin-left: 5rem;
+        text-align: center;
     }
 
     .age_years {
@@ -514,6 +518,7 @@ header,
     body.modo-oscuro .nav-links {
         background-color: var(--color-background-navbar-solid);
     }
+
 }
 
 @media screen and (min-width: 401px) and (max-width: 600px) {
@@ -528,7 +533,7 @@ header,
         justify-content: center;
         align-items: center;
         text-align: center;
-        gap: 20rem;
+        gap: 40rem;
         height: auto;
     }
 
@@ -539,7 +544,7 @@ header,
     .header-left,
     .header-right {
         margin: -8rem 0;
-        padding: 5rem;
+        padding-top: 5rem;
         align-self: center;
     }
 
@@ -566,8 +571,9 @@ header,
     .age_number {
         font-size: 3.5rem;
         color: var(--color-white);
-        margin-top: 0.5rem;
-        text-align: end;
+        margin-top: -1rem;
+        margin-left: 5rem;
+        text-align: center;
     }
 
     .age_years {
@@ -587,6 +593,7 @@ header,
     body.modo-oscuro .nav-links {
         background-color: var(--color-background-navbar-solid);
     }
+
 }
 
 
@@ -604,6 +611,7 @@ header,
         height: 100vh;
         padding-bottom: 6rem;
     }
+
 
     .header-left,
     .header-right,
@@ -652,6 +660,7 @@ header,
     body.modo-oscuro .nav-links {
         background-color: var(--color-background-navbar-solid);
     }
+
 }
 
 
