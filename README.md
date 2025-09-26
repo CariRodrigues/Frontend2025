@@ -108,6 +108,13 @@ Cada integrante tiene un porfolio con:
 ### **Carina Rodrigues**
 ![Captura Carina Rodrigues](img/screenshots/carina_screenshot.png)
 
+Modo oscuro 
+Se implementó un modo oscuro que permite alternar entre tema claro y oscuro, cambiando los colores principales de la interfaz y reemplazando imágenes generales para mantener la coherencia visual según el tema seleccionado.
+![Modo oscuro Carina Rodrigues](assets/capturas-carina/modoOscuro.jpg)
+#### Carrusel de imagenes
+
+
+![Carrusel de películas carina](assets/capturas-carina/carrusel.jpg)
 ---
 ### **Eduardo Mendiola**
 ### Header
