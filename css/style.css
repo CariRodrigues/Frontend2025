@@ -567,9 +567,11 @@ footer p {
     font-size: 1em;
   }p{
     font-size: 0.7em;
-  }.foto-perfil{
-    max-height: 10em;
   }
+ .foto-perfil{
+  width: 150px; 
+}
+  
   .carrusel{
     max-width: 60%
   }
@@ -631,8 +633,9 @@ footer p {
   }p{
     font-size: 0.7em;
   }.foto-perfil{
-    max-height: 10em;
-  }
+  width: 200px; 
+}
+  
   .carrusel{
     max-width: 60%
   }
