@@ -458,7 +458,7 @@ header,
         justify-content: center;
         align-items: center;
         text-align: center;
-        gap: 25rem;
+        gap: 20rem;
         height: auto;
         /* que se ajuste al contenido */
     }
