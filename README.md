@@ -106,6 +106,12 @@ Cada integrante tiene un porfolio con:
 ---
 
 ### **Carina Rodrigues**
+
+**Efecto rotate**
+Mediante la propiedad rotateY aplico un efecto de giro a la imagen de perfil para dar la impresión de que la imagen muestra su dorso al posicionarse sobre ella. De esta manera alterna entre dos imagenes de perfil. 
+
+![Fotoperfil reversa Carina Rodrigues](assets/capturas-carina/fotoperfil-reverse.jpg)
+
 **Underline**
 Se implementó un subrayado animado bajo los títulos h2, que mejora la interacción visual de la página.
 **Tipo de animación:** la línea del subrayado aparece de izquierda a derecha, simulando que se "dibuja" mientras el usuario llega a la sección
@@ -118,6 +124,7 @@ La transición (transition: transform 0.6s ease-out) suaviza el movimiento.
 
 Se implementó un modo oscuro que permite alternar entre tema claro y oscuro, cambiando los colores principales de la interfaz para mantener la coherencia visual según el tema seleccionado.
 ![Modo oscuro Carina Rodrigues](assets/capturas-carina/modoOscuro.jpg)
+
 #### Carrusel de imagenes
 Se implementó un carrusel horizontal para mostrar las imágenes de películas de manera interactiva.
 Permite desplazarse entre las imágenes usando botones que llaman a la función moverCarrusel(direccion).
