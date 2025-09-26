@@ -36,3 +36,17 @@ botonModo.addEventListener('click', () => {
         botonModo.style.justifyContent = 'end';
     }
 });
+// Selecciona todos los títulos
+const titulos = document.querySelectorAll(".underline");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animar");
+    } else {
+      entry.target.classList.remove("animar"); // 👈 si querés que se repita al salir y entrar
+    }
+  });
+}, { threshold: 0.5 }); // 0.5 = cuando el 50% del h2 sea visible
+
+titulos.forEach(titulo => observer.observe(titulo));
