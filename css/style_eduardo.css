@@ -445,8 +445,82 @@ header,
 
 /* Móviles pequeños */
 
+/* Teléfonos muy pequeños (375px o menos) */
+@media screen and (max-width: 380px) {
 
-@media screen and (max-width: 400px) {
+    .navbar,
+    .dropdown-menu {
+        background-color: var(--color-background-navbar-solid);
+    }
+
+    .header-information {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 25rem;
+        height: auto;
+        /* que se ajuste al contenido */
+    }
+
+ 
+    h2 {
+        font-size: 2rem;
+    }
+
+    .header-left,
+    .header-right {
+        margin: -2rem 0;
+        padding-top: 0.5rem;
+        align-self: center;
+    }
+
+    .name_edu {
+        font-size: 2rem;
+        color: var(--color-white);
+    }
+
+    .lastname_edu {
+        font-size: 3rem;
+        color: var(--color-white);
+    }
+
+    .city_edu {
+        font-size: 2rem;
+    }
+
+    .sun_icon {
+        width: 5rem;
+        top: 40%;
+        /* ajustar la posición del sol */
+        left: 50%;
+    }
+
+    .age_number {
+        font-size: 3rem;
+        color: var(--color-white);
+        margin-top: -2rem;
+        margin-left: 5rem;
+        text-align: center;
+    }
+
+    .age_years {
+        font-size: 1.8rem;
+        color: var(--color-white);
+    }
+
+
+    .card {
+        padding: 0.5rem;
+        width: 25vw;
+    }
+
+    body.modo-oscuro .nav-links {
+        background-color: var(--color-background-navbar-solid);
+    }
+}
+
+@media screen and (min-width: 381px) and (max-width: 400px) {
 
     .navbar,
     .dropdown-menu {
