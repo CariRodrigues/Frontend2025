@@ -106,13 +106,24 @@ Cada integrante tiene un porfolio con:
 ---
 
 ### **Carina Rodrigues**
-![Captura Carina Rodrigues](img/screenshots/carina_screenshot.png)
+**Underline**
+Se implementó un subrayado animado bajo los títulos h2, que mejora la interacción visual de la página.
+**Tipo de animación:** la línea del subrayado aparece de izquierda a derecha, simulando que se "dibuja" mientras el usuario llega a la sección
+**Animación controlada con CSS:** se utiliza transform: scaleX(0) al inicio y transform: scaleX(1) al final, para lograr el efecto.
+La transición (transition: transform 0.6s ease-out) suaviza el movimiento.
+**Interacción con scroll:** Mediante IntersectionObserver, la animación puede activarse cada vez que el usuario llega a la sección donde se encuentra el título.
+![Underline-h2 Carina Rodrigues](assets/capturas-carina/underline.jpg)
 
-Modo oscuro 
-Se implementó un modo oscuro que permite alternar entre tema claro y oscuro, cambiando los colores principales de la interfaz y reemplazando imágenes generales para mantener la coherencia visual según el tema seleccionado.
+**Modo oscuro**
+
+Se implementó un modo oscuro que permite alternar entre tema claro y oscuro, cambiando los colores principales de la interfaz para mantener la coherencia visual según el tema seleccionado.
 ![Modo oscuro Carina Rodrigues](assets/capturas-carina/modoOscuro.jpg)
 #### Carrusel de imagenes
-
+Se implementó un carrusel horizontal para mostrar las imágenes de películas de manera interactiva.
+Permite desplazarse entre las imágenes usando botones que llaman a la función moverCarrusel(direccion).
+direccion puede ser 1 para avanzar o -1 para retroceder.
+El carrusel se adapta al ancho del contenedor, mostrando una imagen a la vez y desplazándose completamente a la siguiente.
+Los usuarios pueden navegar entre las tres imágenes de películas de forma cíclica y fluida, con un efecto de desplazamiento horizontal suave.
 
 ![Carrusel de películas carina](assets/capturas-carina/carrusel.jpg)
 ---
