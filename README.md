@@ -106,9 +106,16 @@ Cada integrante tiene un porfolio con:
 ---
 
 ### **Carina Rodrigues**
-![Captura Carina Rodrigues](img/screenshots/carina_screenshot.png)
+**Underline**
+Se implementó un subrayado animado bajo los títulos h2, que mejora la interacción visual de la página.
+**Tipo de animación:** la línea del subrayado aparece de izquierda a derecha, simulando que se "dibuja" mientras el usuario llega a la sección
+**Animación controlada con CSS:** se utiliza transform: scaleX(0) al inicio y transform: scaleX(1) al final, para lograr el efecto.
+La transición (transition: transform 0.6s ease-out) suaviza el movimiento.
+**Interacción con scroll:** Mediante IntersectionObserver, la animación puede activarse cada vez que el usuario llega a la sección donde se encuentra el título.
 
-Modo oscuro 
+
+**Modo oscuro**
+
 Se implementó un modo oscuro que permite alternar entre tema claro y oscuro, cambiando los colores principales de la interfaz y reemplazando imágenes generales para mantener la coherencia visual según el tema seleccionado.
 ![Modo oscuro Carina Rodrigues](assets/capturas-carina/modoOscuro.jpg)
 #### Carrusel de imagenes
