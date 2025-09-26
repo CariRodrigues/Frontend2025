@@ -415,6 +415,11 @@ a:hover {
   position: relative;
   padding: 20px 10px 10px 10px;
   box-shadow: 4px 4px 10px var(--color-encabezado);
+  transition: transform 0.3s ease;
+}
+
+.music-item:hover img{
+  filter: brightness(70%);
 }
 
 .music-grid p {

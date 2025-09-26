@@ -44,7 +44,7 @@ const observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       entry.target.classList.add("animar");
     } else {
-      entry.target.classList.remove("animar"); // 👈 si querés que se repita al salir y entrar
+      entry.target.classList.remove("animar"); // se repite al salir y al entrar
     }
   });
 }, { threshold: 0.5 }); // 0.5 = cuando el 50% del h2 sea visible
