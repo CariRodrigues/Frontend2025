@@ -13,7 +13,7 @@
 | Rodrigues, Carina   | [crc.html](crc.html) |
 | Mendiola, Eduardo E.| [eduardo.html](eduardo.html) |
 | Herrera, Neuyin     | [neuyin.html](neuyin.html) |
-| Integrante 4        | [integrante4.html](int4.html) |
+| Erick J., Romero N. | [erick.html](erick.html) |
 | Integrante 5        | [integrante5.html](int5.html) |
 
 
@@ -54,7 +54,7 @@ El proyecto incluye:
 ├── crc.html               # Página individual de Carina Rodrigues
 ├── eduardo.jpg            # Página individual de Eduardo Mendiola
 ├── neuyin.html            # Página individual de Neuyin Herrera
-├── int4.html              # Página individual del integrante 4
+├── erick.html             # Página individual de Erick Johan Romero Ninanya
 ├── int5.html              # Página individual del integrante 5
 ├── css/
 │   ├── styles.css         # Hoja de estilos principal
@@ -63,26 +63,27 @@ El proyecto incluye:
 │   ├── style_carina.css    
 │   ├── style_eduardo.css       
 │   ├── style_neuyin.css      
-│   ├── style_int4.css 
+│   ├── style_erick.css 
 │   └── style_int5.css   
 ├── js/
 │   ├── crc.js             # JS individual de Carina Rodrigues
 │   ├── eduardo.js         # JS individual de Eduardo Mendiola
 │   ├── neuyin.js          # JS individual de Neuyin Herrera
-│   ├── int4.js            # JS individual del integrante 4
+│   ├── erick.js           # JS individual de Erick Johan Romero Ninanya
 │   ├── int5.js            # JS individual del integrante 5
 │   └── main.js            # Funciones dinámicas generales
 ├── img/  
 │   ├── car
 │   ├── eduardo
 |   ├── neuyin
+|   ├── erick
 │   ├── logo
 │   └── portada
 ├── assests               # Documentos para el readme
 |     ├── capturas-carina    
 │     ├── capturas-eduardo   
 │     ├── capturas-neuyin       
-│     ├── capturas-int4       
+│     ├── capturas-erick       
 │     └── capturas-int5     
 └── README.md               # Este archivo
 
@@ -94,7 +95,7 @@ Cada integrante tiene un porfolio con:
 - **Nombre completo**
 - **Ubicación actual**: Ciudad
 - **Edad**
-- **Habilidades**: (mínimo 4)
+- **Habilidades / hobbies**: (mínimo 4)
 - **Películas favoritas**: (mínimo 3)
 - **Música favorita / discos**: (mínimo 3)
 - Botones de navegación para volver a la portada o moverse entre integrantes.
@@ -221,13 +222,24 @@ Se implementó un modo oscuro que permite alternar entre tema claro y oscuro, ca
 
 ---
 
-### **Int 3**
-![Captura Int 3](img/screenshots/int3_screenshot.png)
+### **Erick Romero**
+
+### Diseño Retro/Pixel Art
+
+Se implementó un diseño con estética retro-gaming utilizando la fuente "Press Start 2P" y un fondo con patrón repetido que simula un ambiente de videojuego clásico. El color predominante es verde neón (lawngreen) evocando las pantallas de consolas antiguas.
+
+![Diseño retro pixel Erick Romero](assets/capturas-erick/background_retropixel.PNG)
+
+### Silder infinito
+
+Se implementó en el sector de Hobbies un slider horizontal interactivo con botones de navegacion a los costados para avanzar o retroceder entre slides con una transición hacia la derecha. Automaticamente cada 3 segundos avanza a la siguiente ilustración acompañada de una descripción. 
+
+![Slider infinito Erick Romero](assets/capturas-erick/slider_infinito.PNG)
 
 ---
 
-### **Int 3**
-![Captura Int 3](img/screenshots/int3_screenshot.png)
+### **Int 5**
+![Captura Int 5](img/screenshots/int5_screenshot.png)
 
 ---
 
