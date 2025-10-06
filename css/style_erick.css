@@ -5,7 +5,7 @@
   --color-texto-principal: #353535;
   --color-secundario: #3C6E71;
   --color-fondo-claro: #ffffff;
-  --color-encabezado: #284b63;
+  --color-encabezado: #284b638e;
   --fuente-principal: 'Press Start 2P', monospace;
 }
 
@@ -18,11 +18,10 @@
 
 /*Estilos Main*/
 body {
-  color: #61f38d; /* Cambia este color por el que prefieras */
+  color: lawngreen; 
   background: url('../img/erick/background_bucle.jpg') repeat; 
   font-family: var(--fuente-principal);
   line-height: 1.6;
-  transition: background 0.3s ease, color 0.3s ease;
   background-size: 400px;
 }
 
@@ -49,15 +48,11 @@ body {
   background-color: var(--color-encabezado);
   padding: 0 1rem;
   position: relative;
-  z-index: 1000;
+   
 }
 
 a:visited {
   color: var(--color-texto-principal);
-}
-
-a:hover {
-  color: var(--color-secundario);
 }
 
 .logo img {
@@ -83,13 +78,13 @@ a:hover {
   color: var(--color-fondo-claro);
   text-decoration: none;
   font-weight: 400;
-  font-size: 0.5rem;
+  font-size: 0.55rem;
   padding: 8px;
   display: block;
 }
 
 .nav-links a:hover {
-  color: var(--color-secundario);
+  color: lawngreen;
 }
 
 /*Desplegable "integrantes"*/
@@ -108,19 +103,21 @@ a:hover {
   padding: 0;
   margin: 0;
   min-width: 150px;
+  z-index: 2000;
 }
 
 .dropdown-menu li a {
   display: block;
   padding: 10px;
   border-radius: 20%;
+  background-color: var(--color-encabezado);
   color: var(--color-fondo-claro);
   text-decoration: none;
 }
 
 .dropdown-menu li a:hover {
   background: var(--color-encabezado);
-  color: var(--color-secundario);
+  color: lawngreen;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -129,16 +126,14 @@ a:hover {
 
 /* Footer */
 footer {
-  background-color: var(--color-encabezado);
-  padding: 5px;
+  background-color: #284b637e;
+  color: var(--color-fondo);
+  padding: 15px;
   text-align: center;
+  font-size: 0.55rem;
 }
 
-footer p {
-  color: var(--color-fondo);
-  font-size: 0.5rem;
-  line-height: 1.2;
-}
+ 
 
 /* CSS para el layout de perfil */
 .about {
@@ -167,64 +162,71 @@ footer p {
   flex: 1;
 }
 
-.about .foto-perfil {
-  filter: none;
-}
-
 /* Contenedor general para las secciones */
 .container {
   max-width: 700px;
   margin: 2rem auto;
   padding: 2rem;
+  overflow: hidden;
+   
 }
 
 /* Secciones individuales */
+
 .info-hobbies, .info-pelis, .info-music {
   text-align: center;
+   
 }
 
 .info-hobbies h2, 
 .info-pelis h2, 
 .info-music h2 {
-  color: #61f38d; /* Verde agua */
+  color: lawngreen;  
   margin-bottom: 1rem;
 }
 
 .info-hobbies img {
-  width: 500px; /* Tamaño más pequeño para las imágenes */
-  height: 500px; /* Mantén la proporción */
+  width: 100%; /* Tamaño más pequeño para las imágenes */
+  height: 100%; /* Mantén la proporción */
   object-fit: cover; /* Asegura que la imagen se ajuste bien */
-  border-radius: 10px; /* Opcional: bordes redondeados */
+  border-radius: 20px; /* Opcional: bordes redondeados */
+  
 }
 
 /* Slider */
 .slider {
+   
   position: relative;
-  width: 100%;
-  height: 400px; 
+  width: 90%;
+  height: 520px; 
+  border-radius: 0px;
+  text-align: center;
+  padding-top: 20px;
 }
 
 .slide {
   position: absolute;
-  top: 0;
   left: 100%;
-  width: 100%;
-  height: 100%;
   opacity: 0;
   transition: left 0.5s ease, opacity 0.5s ease;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 15px;
+  border-radius: 20px;
 }
 
 .slide.active {
-  left: 0;
+  left: 10%;
   opacity: 1;
+
 }
 
 .hobbies {
   position: relative;
-  padding-bottom: 7rem; /* Espacio para los botones */
+  padding-bottom: 5rem; /* Espacio para los botones */
   text-align: center;
 }
 
+ 
 .prev, .next {
   position: absolute;
   top: 50%; /* Move buttons higher to align closer to the image's vertical center */
@@ -250,6 +252,8 @@ footer p {
   background: var(--color-secundario);
 }
 
+
+
 /* Estilos para las cajas de películas */
 .pelis-container {
   display: block; /* Apila las cajas verticalmente */
@@ -258,7 +262,7 @@ footer p {
 }
 
 .pelicula {
-  background-color: var(--color-fondo-claro);
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   padding: 1rem;
   width: 90%; /* Ocupa casi todo el ancho disponible */
@@ -271,7 +275,7 @@ footer p {
 }
 
 .pelicula h3 {
-  color: var(--color-encabezado);
+  color: lawngreen;
   margin-bottom: 0.5rem;
   font-size: 0.8rem;
 }
@@ -282,6 +286,8 @@ footer p {
   height: 400px; /* Altura base para videos */
   margin: 10px 0; /* CAMBIADO: Solo margen vertical */
 }
+
+
 
 /* Estilos para las cajas de música */
 .musica-container {
@@ -294,17 +300,16 @@ footer p {
 }
 
 .cancion {
-  background-color: var(--color-fondo-claro);
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
   padding: 1rem;
   width: 100%; 
-  min-width: 300px; /* Evita que las cajas sean demasiado pequeñas */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 
 .cancion h3 {
-  color: var(--color-encabezado);
+  color: lawngreen;
   margin-bottom: 0.5rem;
   font-size: 0.8rem;
 }
@@ -312,7 +317,7 @@ footer p {
 .cancion iframe {
   border-radius: 8px;
   width: 100%; /* CAMBIADO: Usa todo el ancho disponible */
-  height: 152px; /* Altura estándar de Spotify */
+  height: 100%; /* Altura estándar de Spotify */
   margin: 10px 0; /* CAMBIADO: Solo margen vertical */
 }
 
@@ -340,9 +345,6 @@ footer p {
 /* Responsive Design */
 /* Móviles pequeños (hasta 400px) */
 @media (max-width: 400px) {
-  .navbar {
-    display: flex;
-  }
   
   .nav-links {
     background-color: var(--color-encabezado);
@@ -351,7 +353,6 @@ footer p {
     position: absolute;
     margin-top: 10px;
     display: none;
-    position: absolute;
     top: 100%;
     right: 0;
     padding: 10px;
@@ -383,10 +384,6 @@ footer p {
     font-size: 1.5rem;
   }
   
-  p {
-    font-size: 0.9rem;
-  }
-  
   .container {
     padding: 1rem;
   }
@@ -398,40 +395,20 @@ footer p {
   .pelicula {
     width: 95%; /* Casi todo el ancho en móviles */
     max-width: 100%; /* Ajusta al ancho disponible */
-    padding: 0.8rem; /* CAMBIADO: Menos padding para más espacio */
+    padding: 0.8rem; 
   }
   
   .pelicula iframe {
     width: 100%; /* CAMBIADO: Ancho completo */
     height: 180px; /* Video más pequeño en móviles */
-    margin: 10px 0; /* CAMBIADO: Solo margen vertical */
+    margin: 10px 0; 
   }
   
-  .musica-container {
-    display: block; /* Apila las canciones verticalmente */
-  }
-  
-  .cancion {
-    width: 95%; /* CAMBIADO: Más ancho disponible */
-    max-width: 100%; /* Ajusta al ancho disponible */
-    margin-bottom: 1.5rem; /* Espacio entre canciones */
-    margin-left: auto; /* Centra la caja */
-    margin-right: auto; /* Centra la caja */
-    padding: 0.8rem; /* CAMBIADO: Menos padding para más espacio */
-  }
-  
-  .cancion iframe {
-    width: 100%; /* CAMBIADO: Ancho completo */
-    height: 152px;
-    margin: 10px 0; /* CAMBIADO: Solo margen vertical */
-  }
+   
 }
 
 /* Tablets o pantallas medianas (hasta 900px) */
 @media (max-width: 900px) and (min-width: 401px) {
-  .navbar {
-    display: flex;
-  }
   
   .nav-links {
     background-color: var(--color-encabezado);
@@ -440,7 +417,6 @@ footer p {
     position: absolute;
     margin-top: 10px;
     display: none;
-    position: absolute;
     top: 100%;
     right: 0;
     padding: 10px;
@@ -487,52 +463,4 @@ footer p {
     margin: 10px 0; /* CAMBIADO: Solo margen vertical */
   }
 
-  .cancion {
-    width: 30%; 
-    min-width: 250px; /* Evita que las cajas sean demasiado pequeñas */
-  }
-  
-  .cancion iframe {
-    width: 100%; /* CAMBIADO: Ancho completo */
-    margin: 10px 0; /* CAMBIADO: Solo margen vertical */
-  }
-}
-
-/* Escritorios grandes (desde 1200px) */
-@media (min-width: 1200px) {
-  .about {
-    max-width: 1000px;
-    padding: 3rem;
-  }
-  
-  .foto-perfil img {
-    width: 350px;
-    height: 350px;
-  }
-  
-  .container {
-    max-width: 1200px; /* Aumenta el ancho del contenedor */
-    padding: 3rem;
-  }
-  
-  .pelicula {
-    width: 90%; /* Casi todo el ancho en escritorios */
-    max-width: 1000px; /* Cajas más anchas en escritorios */
-  }
-  
-  .pelicula iframe {
-    width: 100%; /* CAMBIADO: Ancho completo */
-    height: 500px; /* Videos más grandes en escritorios */
-    margin: 10px 0; /* CAMBIADO: Solo margen vertical */
-  }
-
-  .cancion {
-    width: 50%; 
-    min-width: 300px; /* Evita que las cajas sean demasiado pequeñas */
-  }
-  
-  .cancion iframe {
-    width: 100%; /* CAMBIADO: Ancho completo */
-    margin: 10px 0; /* CAMBIADO: Solo margen vertical */
-  }
 }
